@@ -1,0 +1,226 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		403663000000000000000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B257F6C0000000000000000 /* UIKit.framework */; };
+		71FB43FE0000000000000000 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91D5D3A0000000000000000 /* MapKit.framework */; };
+		A8F732E50000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30194C210000000000000000 /* Foundation.framework */; };
+		DFF321CC0000000000000000 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67153B080000000000000000 /* CoreGraphics.framework */; };
+		BC24FA570000000000000000 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 434713930000000000000000 /* Info.plist */; };
+		94B68C710000000000000000 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BD8A5AD0000000000000000 /* LaunchScreen.xib */; };
+		BD6E48E00000000000000000 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4490621C0000000000000000 /* Entitlements.plist */; };
+		C0CC72620000000000000000 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47EE8B9E0000000000000000 /* LaunchScreen.storyboard */; };
+		96ABD4300000000000000000 /* Splash_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 908CD67F0000000000000000 /* Splash_bg.jpg */; };
+		8C63208D0000000000000000 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 138539C90000000000000000 /* AppDelegate.h */; };
+		BFD5A5500000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 931F73910000000000000000 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8ED173450000000000000000 /* VTSClient.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "VTSClient.iOS.app"; path = "VTSClient.iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B257F6C0000000000000000 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; };
+		F91D5D3A0000000000000000 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; };
+		30194C210000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
+		67153B080000000000000000 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreGraphics.framework"; path = "System/Library/Frameworks/CoreGraphics.framework"; sourceTree = SDKROOT; };
+		434713930000000000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Info.plist"; sourceTree = "<group>"; };
+		1BD8A5AD0000000000000000 /* LaunchScreen.xib */ = {isa = PBXFileReference; name = "LaunchScreen.xib"; path = "LaunchScreen.xib"; sourceTree = "<group>"; };
+		4490621C0000000000000000 /* Entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Entitlements.plist"; path = "Entitlements.plist"; sourceTree = "<group>"; };
+		47EE8B9E0000000000000000 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "LaunchScreen.storyboard"; path = "LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		908CD67F0000000000000000 /* Splash_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Splash_bg.jpg"; path = "Splash_bg.jpg"; sourceTree = "<group>"; };
+		138539C90000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
+		931F73910000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2C8461B0000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				403663000000000000000000 /* UIKit.framework in Frameworks */,
+				71FB43FE0000000000000000 /* MapKit.framework in Frameworks */,
+				A8F732E50000000000000000 /* Foundation.framework in Frameworks */,
+				DFF321CC0000000000000000 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4848035D0000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				A49D85310000000000000000 /* VTSClient.iOS */,
+				A13F5BAF0000000000000000 /* Frameworks */,
+				7672C4470000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7672C4470000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8ED173450000000000000000 /* VTSClient.iOS.app */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		A13F5BAF0000000000000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B257F6C0000000000000000 /* UIKit.framework */,
+				F91D5D3A0000000000000000 /* MapKit.framework */,
+				30194C210000000000000000 /* Foundation.framework */,
+				67153B080000000000000000 /* CoreGraphics.framework */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		A49D85310000000000000000 /* VTSClient.iOS */ = {
+			isa = PBXGroup;
+			children = (
+				138539C90000000000000000 /* AppDelegate.h */,
+				4490621C0000000000000000 /* Entitlements.plist */,
+				434713930000000000000000 /* Info.plist */,
+				47EE8B9E0000000000000000 /* LaunchScreen.storyboard */,
+				1BD8A5AD0000000000000000 /* LaunchScreen.xib */,
+				908CD67F0000000000000000 /* Splash_bg.jpg */,
+				450E24350000000000000000 /* Supporting Files */,
+			);
+			name = "VTSClient.iOS";
+			sourceTree = "<group>";
+		};
+		450E24350000000000000000 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				931F73910000000000000000 /* AppDelegate.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7564C980000000000000000 /* VTSClient.iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F96B27910000000000000000 /* Build configuration list for PBXNativeTarget "VTSClient.iOS" */;
+			buildPhases = (
+				2F1DC7EF0000000000000000 /* Sources */,
+				D2C8461B0000000000000000 /* Frameworks */,
+				3D61FA670000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VTSClient.iOS";
+			productName = "VTSClient.iOS";
+			productReference = 8ED173450000000000000000 /* VTSClient.iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3B887330000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = A073CF3F0000000000000000 /* Build configuration list for PBXProject "VTSClient.iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4848035D0000000000000000;
+			productRefGroup = 7672C4470000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7564C980000000000000000 /* VTSClient.iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D61FA670000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC24FA570000000000000000 /* Info.plist in Resources */,
+				94B68C710000000000000000 /* LaunchScreen.xib in Resources */,
+				BD6E48E00000000000000000 /* Entitlements.plist in Resources */,
+				C0CC72620000000000000000 /* LaunchScreen.storyboard in Resources */,
+				96ABD4300000000000000000 /* Splash_bg.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F1DC7EF0000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C63208D0000000000000000 /* AppDelegate.h in Sources */,
+				BFD5A5500000000000000000 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		504DA4EA0000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = MonoTouch;
+		};
+		A944FD3C0000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				PRODUCT_NAME = "VTSClient.iOS";
+				WRAPPER_EXTENSION = app;
+			};
+			name = MonoTouch;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A073CF3F0000000000000000 /* Build configuration list for PBXProject "VTSClient.iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				504DA4EA0000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+		F96B27910000000000000000 /* Build configuration list for PBXNativeTarget "VTSClient.iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A944FD3C0000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3B887330000000000000000 /* Project object */;
+}

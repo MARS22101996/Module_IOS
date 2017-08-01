@@ -1,0 +1,10 @@
+/Users/mariia_suvalova/Desktop/XMP_MY/VTSClient.Core/VTSClient.iOS/bin/iPhoneSimulator/Debug/VTSClient.iOS.exe
+/Users/mariia_suvalova/Desktop/XMP_MY/VTSClient.Core/VTSClient.iOS/bin/iPhoneSimulator/Debug/VTSClient.iOS.pdb
+/Users/mariia_suvalova/Desktop/XMP_MY/VTSClient.Core/VTSClient.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool/_BundleResourceWithLogicalName.items
+/Users/mariia_suvalova/Desktop/XMP_MY/VTSClient.Core/VTSClient.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/actool/_PartialAppManifest.items
+/Users/mariia_suvalova/Desktop/XMP_MY/VTSClient.Core/VTSClient.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/actool/_BundleResourceWithLogicalName.items
+/Users/mariia_suvalova/Desktop/XMP_MY/VTSClient.Core/VTSClient.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/Entitlements.plist
+/Users/mariia_suvalova/Desktop/XMP_MY/VTSClient.Core/VTSClient.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/
+/Users/mariia_suvalova/Desktop/XMP_MY/VTSClient.Core/VTSClient.iOS/obj/iPhoneSimulator/Debug/VTSClient.iOS.csproj.CoreCompileInputs.cache
+/Users/mariia_suvalova/Desktop/XMP_MY/VTSClient.Core/VTSClient.iOS/obj/iPhoneSimulator/Debug/VTSClient.iOS.exe
+/Users/mariia_suvalova/Desktop/XMP_MY/VTSClient.Core/VTSClient.iOS/obj/iPhoneSimulator/Debug/VTSClient.iOS.pdb
