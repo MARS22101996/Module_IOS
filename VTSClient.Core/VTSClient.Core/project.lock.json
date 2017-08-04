@@ -4963,19 +4963,19 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mariia_Suvalova\\Desktop\\TestCrash\\Module_IOS\\VTSClient.Core\\VTSClient.Core\\VTSClient.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Mariia_Suvalova\\Desktop\\XMP_MY\\Module_IOS\\VTSClient.Core\\VTSClient.Core\\VTSClient.Core.csproj",
       "projectName": "VTSClient.Core",
-      "projectPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\TestCrash\\Module_IOS\\VTSClient.Core\\VTSClient.Core\\VTSClient.Core.csproj",
-      "projectJsonPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\TestCrash\\Module_IOS\\VTSClient.Core\\VTSClient.Core\\project.json",
+      "projectPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\XMP_MY\\Module_IOS\\VTSClient.Core\\VTSClient.Core\\VTSClient.Core.csproj",
+      "projectJsonPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\XMP_MY\\Module_IOS\\VTSClient.Core\\VTSClient.Core\\project.json",
       "projectStyle": "ProjectJson",
       "frameworks": {
         "netstandard1.4": {
           "projectReferences": {
-            "C:\\Users\\Mariia_Suvalova\\Desktop\\TestCrash\\Module_IOS\\VTSClient.Core\\VTSClient.BLL\\VTSClient.BLL.csproj": {
-              "projectPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\TestCrash\\Module_IOS\\VTSClient.Core\\VTSClient.BLL\\VTSClient.BLL.csproj"
+            "C:\\Users\\Mariia_Suvalova\\Desktop\\XMP_MY\\Module_IOS\\VTSClient.Core\\VTSClient.BLL\\VTSClient.BLL.csproj": {
+              "projectPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\XMP_MY\\Module_IOS\\VTSClient.Core\\VTSClient.BLL\\VTSClient.BLL.csproj"
             },
-            "C:\\Users\\Mariia_Suvalova\\Desktop\\TestCrash\\Module_IOS\\VTSClient.Core\\VTSClient.DAL\\VTSClient.DAL.csproj": {
-              "projectPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\TestCrash\\Module_IOS\\VTSClient.Core\\VTSClient.DAL\\VTSClient.DAL.csproj"
+            "C:\\Users\\Mariia_Suvalova\\Desktop\\XMP_MY\\Module_IOS\\VTSClient.Core\\VTSClient.DAL\\VTSClient.DAL.csproj": {
+              "projectPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\XMP_MY\\Module_IOS\\VTSClient.Core\\VTSClient.DAL\\VTSClient.DAL.csproj"
             }
           }
         }

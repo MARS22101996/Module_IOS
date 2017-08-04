@@ -4615,10 +4615,10 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mariia_Suvalova\\Desktop\\TestCrash\\Module_IOS\\VTSClient.Core\\VTSClient.DAL\\VTSClient.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Mariia_Suvalova\\Desktop\\XMP_MY\\Module_IOS\\VTSClient.Core\\VTSClient.DAL\\VTSClient.DAL.csproj",
       "projectName": "VTSClient.DAL",
-      "projectPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\TestCrash\\Module_IOS\\VTSClient.Core\\VTSClient.DAL\\VTSClient.DAL.csproj",
-      "projectJsonPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\TestCrash\\Module_IOS\\VTSClient.Core\\VTSClient.DAL\\project.json",
+      "projectPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\XMP_MY\\Module_IOS\\VTSClient.Core\\VTSClient.DAL\\VTSClient.DAL.csproj",
+      "projectJsonPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\XMP_MY\\Module_IOS\\VTSClient.Core\\VTSClient.DAL\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {

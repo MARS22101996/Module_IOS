@@ -1,8 +1,5 @@
 ﻿using Foundation;
 using UIKit;
-using Microsoft.Azure.Mobile;
-using Microsoft.Azure.Mobile.Analytics;
-using Microsoft.Azure.Mobile.Crashes;
 
 namespace VTSClient.iOS
 {
@@ -29,9 +26,6 @@ namespace VTSClient.iOS
 
             // make the window visible
             Window.MakeKeyAndVisible();
-
-            MobileCenter.Start("fc022551-c7f2-4c96-a990-b1b261795422",
-                   typeof(Analytics), typeof(Crashes));
 
             return true;
         }
