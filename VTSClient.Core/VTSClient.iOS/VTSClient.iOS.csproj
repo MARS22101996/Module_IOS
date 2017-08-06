@@ -90,11 +90,17 @@
     <Compile Include="Infrastructure\IOSStrings.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="SQLite.cs" />
-    <Compile Include="SQLiteAsync.cs" />
+    <Compile Include="Table\TableViewCellVacation.cs" />
+    <Compile Include="Table\TableViewCellVacation.designer.cs">
+      <DependentUpon>TableViewCellVacation.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewControllers\LoginViewController\LoginViewController.cs" />
     <Compile Include="ViewControllers\LoginViewController\LoginViewController.designer.cs">
       <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\VactionTableViewController\VacationViewController.cs" />
+    <Compile Include="ViewControllers\VactionTableViewController\VacationViewController.designer.cs">
+      <DependentUpon>VacationViewController.cs</DependentUpon>
     </Compile>
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist" />
@@ -106,14 +112,9 @@
     <InterfaceDefinition Include="Main.storyboard" />
     <BundleResource Include="Resources\Assets.xcassets\LoginBackgroundImage.imageset\Contents.json" />
     <BundleResource Include="Resources\Login_bg.jpg" />
-    <Compile Include="VacationViewController.cs" />
-    <Compile Include="VacationViewController.designer.cs">
-      <DependentUpon>VacationViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TableViewCellVacation.cs" />
-    <Compile Include="TableViewCellVacation.designer.cs">
-      <DependentUpon>TableViewCellVacation.cs</DependentUpon>
-    </Compile>
+    <InterfaceDefinition Include="ViewControllers\VactionTableViewController\VacationViewController.xib" />
+    <InterfaceDefinition Include="Table\TableViewCellVacation.xib" />
+    <ImageAsset Include="Resources\Assets.xcassets\RequestBlue.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -165,6 +166,7 @@
     <BundleResource Include="Resources\Imgs\Login_bg.jpg" />
     <BundleResource Include="Resources\Imgs\Splash_bg.jpg" />
     <BundleResource Include="Resources\Assets.xcassets\LoginBackgroundImage.imageset\Login_bg.jpg" />
+    <ImageAsset Include="Resources\Assets.xcassets\RequestBlue.imageset\Icon_Request_Blue.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Splash_bg.jpg" />

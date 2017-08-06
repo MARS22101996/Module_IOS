@@ -1,4 +1,4 @@
-// WARNING
+﻿// WARNING
 //
 // This file has been generated automatically by Visual Studio from the outlets and
 // actions declared in your storyboard file.
@@ -33,6 +33,25 @@ namespace VTSClient.iOS.ViewControllers.LoginViewController
 
         void ReleaseDesignerOutlets ()
         {
+            if (ButtonLogin != null) {
+                ButtonLogin.Dispose ();
+                ButtonLogin = null;
+            }
+
+            if (TextFieldLogin != null) {
+                TextFieldLogin.Dispose ();
+                TextFieldLogin = null;
+            }
+
+            if (TextFieldPassword != null) {
+                TextFieldPassword.Dispose ();
+                TextFieldPassword = null;
+            }
+
+            if (TextViewErrorMessage != null) {
+                TextViewErrorMessage.Dispose ();
+                TextViewErrorMessage = null;
+            }
         }
     }
 }
