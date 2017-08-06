@@ -120,7 +120,7 @@
         <!--Login View Controller-->
         <scene sceneID="cef-LH-7lA">
             <objects>
-                <viewController id="B25-L8-ASu" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B25-L8-ASu" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gVI-YE-XJq"/>
                         <viewControllerLayoutGuide type="bottom" id="f54-l8-ker"/>

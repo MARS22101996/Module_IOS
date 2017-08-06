@@ -44,6 +44,11 @@
       <Optimize>false</Optimize>
       <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/LoginViewController.nib">
+      <LogicalName>Main.storyboardc/LoginViewController.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/Rzy-83-peI-view-bW1-HH-OAe.nib">
       <LogicalName>Main.storyboardc/Rzy-83-peI-view-bW1-HH-OAe.nib</LogicalName>
       <Optimize>false</Optimize>
@@ -51,11 +56,6 @@
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/SplitViewControllerMenu.nib">
       <LogicalName>Main.storyboardc/SplitViewControllerMenu.nib</LogicalName>
-      <Optimize>false</Optimize>
-      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
-    </_BundleResourceWithLogicalName>
-    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/UIViewController-B25-L8-ASu.nib">
-      <LogicalName>Main.storyboardc/UIViewController-B25-L8-ASu.nib</LogicalName>
       <Optimize>false</Optimize>
       <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>

@@ -3,6 +3,8 @@ using Autofac;
 using UIKit;
 using VTSClient.BLL.Interfaces;
 using VTSClient.BLL.Dto;
+using VTSClient.Bll.Services;
+using VTSClient.DAL.Repositories;
 
 namespace VTSClient.iOS.ViewControllers.LoginViewController
 {
@@ -10,9 +12,11 @@ namespace VTSClient.iOS.ViewControllers.LoginViewController
 	{
 		private readonly IAccountService _accountService;
 
-		public LoginViewController() : base("LoginViewController", null)
+		public LoginViewController(IntPtr handle) : base(handle)
 		{
-			_accountService = IOSSetup.Container.Resolve<IAccountService>();
+            //_accountService = IOSSetup.Container.Resolve<IAccountService>();
+            var repo = new UserRepository();
+            _accountService = new AccountService(repo);
 		}
 
 		public override void DidReceiveMemoryWarning()
