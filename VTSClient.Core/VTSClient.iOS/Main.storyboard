@@ -31,8 +31,8 @@
                                         <constraint firstAttribute="width" constant="110" id="jYQ-BR-yGZ"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq9-kK-ipt">
-                                    <rect key="frame" x="0.0" y="145" width="414" height="28.666666666666657"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq9-kK-ipt">
+                                    <rect key="frame" x="0.0" y="145" width="414" height="29"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                     <color key="textColor" red="0.30894136428833008" green="0.76899439096450806" blue="0.82660388946533203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -129,7 +129,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Vr5-d5-CM5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Vr5-d5-CM5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Error" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Guh-Hm-agC">
@@ -467,7 +467,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1718.840579710145" y="-685.59782608695662"/>
+            <point key="canvasLocation" x="1718.8409999999999" y="-685.59780000000001"/>
         </scene>
         <!--Vacation View Controller-->
         <scene sceneID="ZhV-vm-x9L">
@@ -487,13 +487,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vcJ-HY-dRK">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="79.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="JUH-0S-D7L"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0b-Lc-KN0">
-                                            <rect key="frame" x="90" y="5" width="180" height="20.666666666666668"/>
+                                            <rect key="frame" x="90" y="5" width="180" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="180" id="8cV-F2-DEk"/>
                                             </constraints>
@@ -502,7 +502,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kv-Xg-PHu">
-                                            <rect key="frame" x="90" y="30.666666666666664" width="140" height="19.999999999999993"/>
+                                            <rect key="frame" x="90" y="31" width="140" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="EBF-Wb-dLt"/>
                                                 <constraint firstAttribute="width" constant="140" id="vsb-B9-Vdq"/>
@@ -512,7 +512,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZX-mE-rcE">
-                                            <rect key="frame" x="235" y="28.999999999999996" width="146" height="21.666666666666661"/>
+                                            <rect key="frame" x="235" y="29" width="146" height="22"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.63913947343826294" green="0.63926512002944946" blue="0.63913017511367798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -557,6 +557,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Splash_bg.jpg" width="1080" height="1920"/>
+        <image name="Login_bg.jpg" width="480" height="853"/>
     </resources>
 </document>

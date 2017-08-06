@@ -1,21 +1,16 @@
 ﻿<Properties StartupConfiguration="{2641E16F-C3D4-4FBA-80C9-72887B4576EE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="VTSClient.BLL/Dto/LoginDto.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VTSClient.iOS/Main.cs">
     <Files>
-      <File FileName="VTSClient.iOS/Infrastructure/IOSSetup.cs" Line="19" Column="13" />
-      <File FileName="VTSClient.Core/Infrastructure/DI/CoreSetup.cs" Line="3" Column="1" />
-      <File FileName="VTSClient.iOS/Main.cs" Line="13" Column="17" />
-      <File FileName="VTSClient.iOS/ViewControllers/LoginViewController/LoginViewController.cs" Line="12" Column="3" />
-      <File FileName="VTSClient.BLL/Services/AccountService.cs" Line="10" Column="32" />
-      <File FileName="VTSClient.iOS/AppDelegate.cs" Line="27" Column="1" />
-      <File FileName="VTSClient.iOS/MenuTableViewController.cs" Line="1" Column="1" />
-      <File FileName="VTSClient.iOS/Main.storyboard" Line="1" Column="2" />
-      <File FileName="VTSClient.BLL/Dto/LoginDto.cs" Line="11" Column="17" />
+      <File FileName="VTSClient.iOS/ViewControllers/LoginViewController/LoginViewController.cs" Line="17" Column="1" />
+      <File FileName="VTSClient.iOS/Main.cs" Line="14" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/mariia_suvalova/Desktop/XMP_MY/VTSClient.Core/VTSClient.Core/Infrastructure/DI/CoreSetup.cs" relfile="VTSClient.Core/Infrastructure/DI/CoreSetup.cs" line="18" column="1" />
+      <Breakpoint file="/Users/mariia_suvalova/Desktop/XMP_MY/VTSClient.Core/VTSClient.iOS/ViewControllers/LoginViewController/LoginViewController.cs" relfile="VTSClient.iOS/ViewControllers/LoginViewController/LoginViewController.cs" line="17" column="1" />
+      <Breakpoint file="/Users/mariia_suvalova/Desktop/XMP_MY/VTSClient.Core/VTSClient.BLL/Services/AccountService.cs" relfile="VTSClient.BLL/Services/AccountService.cs" line="21" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
