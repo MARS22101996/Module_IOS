@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Autofac;
 using VTSClient.BLL.Dto;
 using VTSClient.BLL.Interfaces;

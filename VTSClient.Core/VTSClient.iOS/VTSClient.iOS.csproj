@@ -84,25 +84,64 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\IOSDbLocation.cs" />
+    <Compile Include="Infrastructure\IOSSetup.cs" />
+    <Compile Include="Infrastructure\IOSStrings.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewControllers\LoginViewController\LoginViewController.cs" />
+    <Compile Include="ViewControllers\LoginViewController\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="ViewControllers\LoginViewController\LoginViewController.xib" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.1\lib\netstandard1.1\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Entitlements.plist" />
+    <BundleResource Include="Resources\Imgs\Avatar_Ark.png" />
+    <BundleResource Include="Resources\Imgs\Icon_Request_Blue.png" />
+    <BundleResource Include="Resources\Imgs\Icon_Request_Dark.png" />
+    <BundleResource Include="Resources\Imgs\Icon_Request_Gray.png" />
+    <BundleResource Include="Resources\Imgs\Icon_Request_Green.png" />
+    <BundleResource Include="Resources\Imgs\Icon_Request_Plum.png" />
+    <BundleResource Include="Resources\Imgs\Login_bg.jpg" />
+    <BundleResource Include="Resources\Imgs\Login_bg.png" />
+    <BundleResource Include="Resources\Imgs\Splash_bg.jpg" />
+    <BundleResource Include="Resources\Imgs\Splash_bg.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Splash_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\VTSClient.BLL\VTSClient.BLL.csproj">
+      <Project>{d5ea0b2a-9cf2-4fbc-a3d2-b078558b8f0c}</Project>
+      <Name>VTSClient.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTSClient.Core\VTSClient.Core.csproj">
+      <Project>{bc1070a5-99b7-471d-b375-9c76fd0ee113}</Project>
+      <Name>VTSClient.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTSClient.DAL\VTSClient.DAL.csproj">
+      <Project>{5c7afdcc-54f8-45de-9053-a050b363cd1c}</Project>
+      <Name>VTSClient.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
