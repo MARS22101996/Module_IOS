@@ -19,7 +19,7 @@ namespace VTSClient.DAL.Repositories
 
 		public UserRepository()
 		{
-			_loginUri = "localhost:5000/vts/signin";
+			_loginUri = "http://localhost:5000/vts/signin";
 			_httpClient = new HttpClient();
 		}
 

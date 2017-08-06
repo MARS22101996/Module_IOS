@@ -1,4 +1,5 @@
 ﻿using UIKit;
+using VTSClient.iOS.Infrastructure;
 
 namespace VTSClient.iOS
 {
@@ -9,7 +10,7 @@ namespace VTSClient.iOS
         {
 			// if you want to use a different Application Delegate class from "AppDelegate"
 			// you can specify it here.
-			//IOSSetup.Initialize();
+			IOSSetup.Initialize();
 			UIApplication.Main(args, null, "AppDelegate");
         }
     }

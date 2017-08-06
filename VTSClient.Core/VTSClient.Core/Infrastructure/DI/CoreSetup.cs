@@ -45,7 +45,7 @@ namespace VTSClient.Core.Infrastructure.DI
                 .InstancePerDependency();
 
 
-            AutoMapperCoreConfiguration.Configure();
-        }
+			AutoMapperCoreConfiguration.Configure();
+		}
     }
 }
