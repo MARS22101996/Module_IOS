@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{2641E16F-C3D4-4FBA-80C9-72887B4576EE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../Example/vtsclient_xmp17_antonkurasov-master-d09c392f3e6688d40e69bb5ff320fd22e014ecbf/VTSClient/VTSClient.iOS/Resources/LaunchScreen.storyboard">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VTSClient.iOS/Infrastructure/IOSSetup.cs">
     <Files>
+      <File FileName="VTSClient.iOS/Infrastructure/IOSSetup.cs" Line="16" Column="27" />
+      <File FileName="VTSClient.Core/Infrastructure/DI/CoreSetup.cs" Line="15" Column="25" />
       <File FileName="VTSClient.iOS/Main.cs" Line="12" Column="1" />
-      <File FileName="VTSClient.iOS/LaunchScreen.storyboard" />
-      <File FileName="../../Example/vtsclient_xmp17_antonkurasov-master-d09c392f3e6688d40e69bb5ff320fd22e014ecbf/VTSClient/VTSClient.iOS/Resources/LaunchScreen.storyboard" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F7564C980000000000000000"
+               BlueprintIdentifier = "B88D9D2A0000000000000000"
                BuildableName = "VTSClient.iOS.app"
                BlueprintName = "VTSClient.iOS"
                ReferencedContainer = "container:VTSClient.iOS.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F7564C980000000000000000"
+            BlueprintIdentifier = "B88D9D2A0000000000000000"
             BuildableName = "VTSClient.iOS.app"
             BlueprintName = "VTSClient.iOS"
             ReferencedContainer = "container:VTSClient.iOS.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F7564C980000000000000000"
+            BlueprintIdentifier = "B88D9D2A0000000000000000"
             BuildableName = "VTSClient.iOS.app"
             BlueprintName = "VTSClient.iOS"
             ReferencedContainer = "container:VTSClient.iOS.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F7564C980000000000000000"
+            BlueprintIdentifier = "B88D9D2A0000000000000000"
             BuildableName = "VTSClient.iOS.app"
             BlueprintName = "VTSClient.iOS"
             ReferencedContainer = "container:VTSClient.iOS.xcodeproj">
