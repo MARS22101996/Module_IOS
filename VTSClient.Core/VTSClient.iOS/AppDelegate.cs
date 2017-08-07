@@ -16,21 +16,25 @@ namespace VTSClient.iOS
             set;
         }
 
-        public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
-        {
-            // create a new window instance based on the screen size
-            Window = new UIWindow(UIScreen.MainScreen.Bounds);
+		UIWindow _window;
+		public static UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);
 
-            // If you have defined a root view controller, set it here:
-            // Window.RootViewController = myViewController;
+		public static UIViewController InitialViewController;
 
-            // make the window visible
-            Window.MakeKeyAndVisible();
+		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+		{
+			_window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            return true;
-        }
+			InitialViewController = Storyboard.InstantiateInitialViewController();
 
-        public override void OnResignActivation(UIApplication application)
+			_window.RootViewController = InitialViewController;
+
+			_window.MakeKeyAndVisible();
+
+			return true;
+		}
+
+		public override void OnResignActivation(UIApplication application)
         {
             // Invoked when the application is about to move from active to inactive state.
             // This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) 
