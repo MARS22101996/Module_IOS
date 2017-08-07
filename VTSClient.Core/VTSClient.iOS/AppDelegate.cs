@@ -16,20 +16,19 @@ namespace VTSClient.iOS
             set;
         }
 
-		UIWindow window;
-		public static UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);
-		public static UIViewController initialViewController;
+        public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+        {
+            // create a new window instance based on the screen size
+            Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-		{
-			window = new UIWindow(UIScreen.MainScreen.Bounds);
+            // If you have defined a root view controller, set it here:
+            // Window.RootViewController = myViewController;
 
-			initialViewController = Storyboard.InstantiateInitialViewController() as UIViewController;
+            // make the window visible
+            Window.MakeKeyAndVisible();
 
-			window.RootViewController = initialViewController;
-			window.MakeKeyAndVisible();
-			return true;
-		}
+            return true;
+        }
 
         public override void OnResignActivation(UIApplication application)
         {

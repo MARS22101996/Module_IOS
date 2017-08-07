@@ -1,6 +1,5 @@
 ﻿using Autofac;
 using AutoMapper;
-using VTSClient.Bll.Services;
 using VTSClient.BLL.Interfaces;
 using VTSClient.BLL.Services;
 using VTSClient.Core.Infrastructure.Automapper;
@@ -34,10 +33,6 @@ namespace VTSClient.Core.Infrastructure.DI
 
             containerBuilder.RegisterType<ApiVacationService>().As<IApiVacationService>();
 
-			containerBuilder.RegisterType<AccountService>().As<IAccountService>();
-
-            containerBuilder.RegisterType<UserRepository>().As<IUserRepository>();
-
             containerBuilder.RegisterType<CommonApiRepository>().As<IApiRepository>();
 
             containerBuilder.RegisterGeneric(typeof(CommonSqlRepository<>))
@@ -45,7 +40,7 @@ namespace VTSClient.Core.Infrastructure.DI
                 .InstancePerDependency();
 
 
-			AutoMapperCoreConfiguration.Configure();
-		}
+            AutoMapperCoreConfiguration.Configure();
+        }
     }
 }

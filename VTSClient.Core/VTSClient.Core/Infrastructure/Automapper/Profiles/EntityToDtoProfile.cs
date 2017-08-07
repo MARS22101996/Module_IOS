@@ -9,7 +9,6 @@ namespace VTSClient.Core.Infrastructure.Automapper.Profiles
         public EntityToDtoProfile()
         {
             CreateMap<Vacation, VacationDto>();
-			CreateMap<User, LoginDto>();
-		}
+        }
     }
 }
