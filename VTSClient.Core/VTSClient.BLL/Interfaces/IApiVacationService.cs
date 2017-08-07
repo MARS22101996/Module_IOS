@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using VTSClient.BLL.Dto;
+using VTSClient.DataAccess.Enums;
 
 namespace VTSClient.BLL.Interfaces
 {
@@ -16,5 +17,8 @@ namespace VTSClient.BLL.Interfaces
         Task<bool> UpdateVacationAsync(VacationDto entity);
 
         Task<bool> DeleteVacationByIdAsync(Guid id);
+
+	    Task<IEnumerable<VacationDto>> FilterVacations(FilterEnum type);
+
     }
 }

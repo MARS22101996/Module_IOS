@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="Dto\LoginDto.cs" />
     <Compile Include="Dto\VacationDto.cs" />
+    <Compile Include="Enums\FilterEnum.cs" />
+    <Compile Include="Enums\VacationStatus.cs" />
+    <Compile Include="Enums\VacationType.cs" />
     <Compile Include="Interfaces\IAccountService.cs" />
     <Compile Include="Interfaces\IApiVacationService.cs" />
     <Compile Include="Interfaces\ISqlVacationService.cs" />

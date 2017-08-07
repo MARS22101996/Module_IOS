@@ -1,4 +1,5 @@
 ﻿using System;
+using VTSClient.DataAccess.Enums;
 
 namespace VTSClient.BLL.Dto
 {
@@ -14,8 +15,8 @@ namespace VTSClient.BLL.Dto
 
         public string CreatedBy { get; set; }
 
-        public int VacationStatus { get; set; }
+        public VacationStatus VacationStatus { get; set; }
 
-        public int VacationType { get; set; }
+        public VacationType VacationType { get; set; }
     }
 }

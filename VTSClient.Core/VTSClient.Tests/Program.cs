@@ -4,6 +4,7 @@ using System.Linq;
 using Autofac;
 using VTSClient.BLL.Dto;
 using VTSClient.BLL.Interfaces;
+using VTSClient.DataAccess.Enums;
 using VTSClient.Tests.Infrastructure;
 
 namespace VTSClient.Tests
@@ -89,8 +90,8 @@ namespace VTSClient.Tests
                 CreatedBy = "new-vacation",
                 End = DateTime.Now.AddDays(2),
                 Start = DateTime.Now,
-                VacationStatus = 4,
-                VacationType = 4
+                VacationStatus = VacationStatus.Closed,
+                VacationType = VacationType.Overtime
             };
 
             return newVacation;

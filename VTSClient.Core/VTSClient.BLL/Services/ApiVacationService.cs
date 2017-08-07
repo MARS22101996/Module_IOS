@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using VTSClient.BLL.Dto;
 using VTSClient.BLL.Interfaces;
+using VTSClient.DataAccess.Enums;
 using VTSClient.DAL.Entities;
 using VTSClient.DAL.Infrastructure;
 using VTSClient.DAL.Interfaces;
@@ -30,7 +32,21 @@ namespace VTSClient.BLL.Services
             return vacationDtos;
         }
 
-        public async Task<VacationDto> GetVacationByIdAsync(Guid id)
+		public async Task<IEnumerable<VacationDto>> FilterVacations(FilterEnum type)
+		{
+			var vacations = await _vacationRepository.GetAsync<Vacation>(UrlName.GetApiUrl());
+			switch (type)
+			{
+				case FilterEnum.Closed:
+					return Mapper.Map<IEnumerable<VacationDto>>(vacations.Where(x => x.VacationStatus == 5));
+				case FilterEnum.Opened:
+					return Mapper.Map<IEnumerable<VacationDto>>(vacations.Where(x => x.VacationStatus !=5));
+				default:
+					return Mapper.Map<IEnumerable<VacationDto>>(vacations);
+			}
+		}
+
+		public async Task<VacationDto> GetVacationByIdAsync(Guid id)
         {
             var vacation = await _vacationRepository.GetByIdAsync<Vacation>(id, UrlName.GetApiUrl());
 

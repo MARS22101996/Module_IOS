@@ -84,14 +84,31 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Cells\VacationTableCell.cs" />
+    <Compile Include="Cells\VacationTableCell.designer.cs">
+      <DependentUpon>VacationTableCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\LoginViewController.cs" />
     <Compile Include="Controllers\LoginViewController.designer.cs">
       <DependentUpon>LoginViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\MenuTableViewController.cs" />
+    <Compile Include="Controllers\MenuTableViewController.designer.cs">
+      <DependentUpon>MenuTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\VacationsTableViewController.cs" />
+    <Compile Include="Controllers\VacationsTableViewController.designer.cs">
+      <DependentUpon>VacationsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\MenuTableViewSource.cs" />
+    <Compile Include="DataSources\VacationsDataSource.cs" />
     <Compile Include="Infrastructure\DbLocation.cs" />
+    <Compile Include="Infrastructure\Extensions\DateTimeExtensions.cs" />
     <Compile Include="Infrastructure\IOSSetup.cs" />
+    <Compile Include="Infrastructure\VacationTypeSetting.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <InterfaceDefinition Include="Cells\VacationTableCell.xib" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
