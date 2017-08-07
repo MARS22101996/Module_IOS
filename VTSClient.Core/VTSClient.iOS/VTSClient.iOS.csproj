@@ -98,6 +98,11 @@
     <Compile Include="ViewControllers\LoginViewController\LoginViewController.designer.cs">
       <DependentUpon>LoginViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewControllers\MenuTableViewController\MenuTableViewController.cs" />
+    <Compile Include="ViewControllers\MenuTableViewController\MenuTableViewController.designer.cs">
+      <DependentUpon>MenuTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MenuTableViewController\MenuTableViewSource.cs" />
     <Compile Include="ViewControllers\VactionTableViewController\VacationViewController.cs" />
     <Compile Include="ViewControllers\VactionTableViewController\VacationViewController.designer.cs">
       <DependentUpon>VacationViewController.cs</DependentUpon>
@@ -112,9 +117,11 @@
     <InterfaceDefinition Include="Main.storyboard" />
     <BundleResource Include="Resources\Assets.xcassets\LoginBackgroundImage.imageset\Contents.json" />
     <BundleResource Include="Resources\Login_bg.jpg" />
-    <InterfaceDefinition Include="ViewControllers\VactionTableViewController\VacationViewController.xib" />
     <InterfaceDefinition Include="Table\TableViewCellVacation.xib" />
     <ImageAsset Include="Resources\Assets.xcassets\RequestBlue.imageset\Contents.json" />
+    <InterfaceDefinition Include="ViewControllers\MenuTableViewController\MenuTableViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\VactionTableViewController\VacationViewController.xib" />
+    <ImageAsset Include="Resources\Assets.xcassets\Avatar.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -166,6 +173,7 @@
     <BundleResource Include="Resources\Imgs\Login_bg.jpg" />
     <BundleResource Include="Resources\Imgs\Splash_bg.jpg" />
     <BundleResource Include="Resources\Assets.xcassets\LoginBackgroundImage.imageset\Login_bg.jpg" />
+    <ImageAsset Include="Resources\Assets.xcassets\Avatar.imageset\Avatar_Ark.png" />
     <ImageAsset Include="Resources\Assets.xcassets\RequestBlue.imageset\Icon_Request_Blue.png" />
   </ItemGroup>
   <ItemGroup>

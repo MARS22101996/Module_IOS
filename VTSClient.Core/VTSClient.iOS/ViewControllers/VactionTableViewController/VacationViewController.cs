@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Autofac;
 using Foundation;
 using UIKit;
 using VTSClient.BLL.Dto;
+using VTSClient.BLL.Interfaces;
+using VTSClient.iOS.Infrastructure;
 using VTSClient.iOS.Table;
 
 namespace VTSClient.iOS
@@ -14,17 +17,20 @@ namespace VTSClient.iOS
 
 		private readonly UIBarButtonItem _buttonMenu;
 		private readonly UIBarButtonItem _buttonAdd;
+		private IApiVacationService _vacationService;
 
 		public VacationViewController(IntPtr intPtr) : base(intPtr) 
 		{
 			_buttonMenu = new UIBarButtonItem(UIBarButtonSystemItem.Action);
 			_buttonAdd = new UIBarButtonItem(UIBarButtonSystemItem.Add);
+			_vacationService = IOSSetup.Container.Resolve<IApiVacationService>();
 		}
 
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
 
+			Vacations = _vacationService.GetVacationAsync().Result;
 
 			NavigationItem.LeftBarButtonItem = _buttonMenu;
 			NavigationItem.RightBarButtonItem = _buttonAdd;

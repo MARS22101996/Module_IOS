@@ -35,7 +35,7 @@ namespace VTSClient.DAL.Repositories
 				Content = content
 			};
 
-			HttpResponseMessage response = await _httpClient.SendAsync(request);
+			HttpResponseMessage response =  _httpClient.SendAsync(request).Result;
 
 			IEnumerable<string> headerValues;
 			bool isTokenExist = response.Headers.TryGetValues(TokenHeaderName, out headerValues);

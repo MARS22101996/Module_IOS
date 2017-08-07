@@ -28,5 +28,6 @@
         <image name="Login_bg.jpg" width="480" height="853"/>
         <image name="Splash_bg.jpg" width="1080" height="1920"/>
         <image name="RequestBlue" width="90" height="90"/>
+        <image name="Avatar" width="384" height="348"/>
     </resources>
 </document>
