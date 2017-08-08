@@ -8,7 +8,7 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 
-namespace VTSClient.iOS
+namespace VTSClient.iOS.Controllers
 {
     [Register ("LoginViewController")]
     partial class LoginViewController
@@ -30,25 +30,6 @@ namespace VTSClient.iOS
 
         void ReleaseDesignerOutlets ()
         {
-            if (ErrorText != null) {
-                ErrorText.Dispose ();
-                ErrorText = null;
-            }
-
-            if (LoginText != null) {
-                LoginText.Dispose ();
-                LoginText = null;
-            }
-
-            if (PasswordText != null) {
-                PasswordText.Dispose ();
-                PasswordText = null;
-            }
-
-            if (SiginButton != null) {
-                SiginButton.Dispose ();
-                SiginButton = null;
-            }
         }
     }
 }

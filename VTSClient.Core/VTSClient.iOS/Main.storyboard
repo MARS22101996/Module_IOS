@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginPageController" sceneMemberID="viewController" storyboardIdentifier="LoginPageController" useStoryboardIdentifierAsRestorationIdentifier="YES">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -496,5 +496,7 @@
         <image name="Icon_Request_Gray" width="90" height="90"/>
         <image name="Icon_Request_Green" width="90" height="90"/>
         <image name="Icon_Request_Plum" width="90" height="90"/>
+        <image name="ITunesArtwork" width="512" height="512"/>
+        <image name="ITunesArtwork@2x" width="512" height="512"/>
     </resources>
 </document>

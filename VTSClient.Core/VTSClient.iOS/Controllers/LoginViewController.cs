@@ -4,10 +4,9 @@ using Autofac;
 using UIKit;
 using VTSClient.BLL.Dto;
 using VTSClient.BLL.Interfaces;
-using VTSClient.Core.Infrastructure.DI;
 using VTSClient.iOS.Infrastructure;
 
-namespace VTSClient.iOS
+namespace VTSClient.iOS.Controllers
 {
 	public partial class LoginViewController : UIViewController
 	{
