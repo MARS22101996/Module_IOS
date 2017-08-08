@@ -23,7 +23,7 @@ namespace VTSClient.Core.ViewModels
                 return _loginTextValue;
             }  
             set
-            {
+           {
                 _loginTextValue = value;
 
                 RaisePropertyChanged(() => LoginTextValue);

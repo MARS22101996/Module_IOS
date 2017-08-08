@@ -28,17 +28,6 @@ namespace VTSClient.iOS
 
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
-			//_window = new UIWindow(UIScreen.MainScreen.Bounds);
-
-			//InitialViewController = Storyboard.InstantiateInitialViewController();
-
-			//_window.RootViewController = InitialViewController;
-
-			//_window.MakeKeyAndVisible();
-
-			//return true;
-			
-
 			app.SetStatusBarHidden(false, true);
 
 			// create a new window instance based on the screen size

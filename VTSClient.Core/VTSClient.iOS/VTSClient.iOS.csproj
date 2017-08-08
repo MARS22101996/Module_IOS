@@ -131,17 +131,7 @@
     <None Include="packages.config" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <Compile Include="Setup.cs" />
-    <InterfaceDefinition Include="Views\LoginPageViewController.xib" />
-    <Compile Include="Views\LoginPageViewController.cs" />
-    <Compile Include="Views\LoginPageViewController.designer.cs">
-      <DependentUpon>LoginPageViewController.cs</DependentUpon>
-    </Compile>
     <None Include="Main.storyboard" />
-    <InterfaceDefinition Include="Views\MyViewController.xib" />
-    <Compile Include="Views\MyViewController.cs" />
-    <Compile Include="Views\MyViewController.designer.cs">
-      <DependentUpon>MyViewController.cs</DependentUpon>
-    </Compile>
     <InterfaceDefinition Include="Views\Login\LoginView.xib" />
     <Compile Include="Views\Login\LoginView.cs" />
     <Compile Include="Views\Login\LoginView.designer.cs">

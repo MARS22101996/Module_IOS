@@ -27,7 +27,6 @@ namespace VTSClient.iOS.Views.Login
 
 		protected void ApplyBindings()
 		{
-
 			var bindingSet = this.CreateBindingSet<LoginView, LoginPageViewModel>();
 
 			bindingSet.Bind(LoginText)
