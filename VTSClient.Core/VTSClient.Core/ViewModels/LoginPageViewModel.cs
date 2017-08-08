@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Autofac;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Localization;
 using VTSClient.BLL.Dto;
 using VTSClient.BLL.Interfaces;
 using VTSClient.Core.Infrastructure.DI;
@@ -39,6 +40,8 @@ namespace VTSClient.Core.ViewModels
 							var status = await LoginUser();
 
 							if (!status) return;
+
+
 
 						}));
 			}

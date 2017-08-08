@@ -9,11 +9,10 @@ using VTSClient.Core.ViewModels;
 
 namespace VTSClient.iOS
 {
-	[MvxFromStoryboard]
 	public partial class LoginPageView : MvxViewController<LoginPageViewModel>
 	{
 
-		public LoginPageView(IntPtr handle) : base(handle)
+		public LoginPageView() : base("LoginPageView", null)
 		{
 
 		}

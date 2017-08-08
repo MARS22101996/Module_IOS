@@ -1,8 +1,10 @@
 ﻿using Autofac;
 using AutoMapper;
+using MvvmCross.Core.ViewModels;
 using VTSClient.Bll.Services;
 using VTSClient.BLL.Interfaces;
 using VTSClient.BLL.Services;
+using VTSClient.Core;
 using VTSClient.Core.Infrastructure.Automapper;
 using VTSClient.Core.Infrastructure.Automapper.Profiles;
 using VTSClient.DAL.Infrastructure.Interfaces;
@@ -47,6 +49,8 @@ namespace VTSClient.iOS.Infrastructure
 			builder.RegisterType<UserRepository>().As<IUserRepository>();
 
 			builder.RegisterType<CommonApiRepository>().As<IApiRepository>();
+
+            builder.RegisterType<CustomAppStart>().As<IMvxAppStart>();
 
 			builder.RegisterGeneric(typeof(CommonSqlRepository<>))
 				.As(typeof(ISqlRepository<>))

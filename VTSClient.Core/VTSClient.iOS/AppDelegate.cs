@@ -1,12 +1,16 @@
 ﻿using Foundation;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Platform;
+using MvvmCross.Platform;
 using UIKit;
+using VTSClient.Core;
 
 namespace VTSClient.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the
     // User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
     [Register("AppDelegate")]
-    public class AppDelegate : UIApplicationDelegate
+    public class AppDelegate : MvxApplicationDelegate
     {
         // class-level declarations
 
@@ -23,13 +27,32 @@ namespace VTSClient.iOS
 
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
-			_window = new UIWindow(UIScreen.MainScreen.Bounds);
+			//_window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-			InitialViewController = Storyboard.InstantiateInitialViewController();
+			//InitialViewController = Storyboard.InstantiateInitialViewController();
 
-			_window.RootViewController = InitialViewController;
+			//_window.RootViewController = InitialViewController;
 
-			_window.MakeKeyAndVisible();
+			//_window.MakeKeyAndVisible();
+
+			//return true;
+			
+
+			app.SetStatusBarHidden(false, true);
+
+			// create a new window instance based on the screen size
+			Window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+			var setup = new Setup(this, Window);
+
+			setup.Initialize();
+
+			var startup = Mvx.Resolve<IMvxAppStart>();
+
+			startup.Start();
+
+			// make the window visible
+			Window.MakeKeyAndVisible();
 
 			return true;
 		}
