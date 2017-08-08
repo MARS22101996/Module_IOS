@@ -45,6 +45,7 @@
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="CustomAppStart.cs" />
     <Compile Include="App.cs" />
+    <Compile Include="ViewModels\VacationViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />

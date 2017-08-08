@@ -11,7 +11,7 @@ namespace VTSClient.Core
 	{
 		public void Start(object hint = null)
 		{					
-			ShowViewModel<MonkeysViewModel>();
+			ShowViewModel<VacationViewModel>();
 		}
 	}
 }

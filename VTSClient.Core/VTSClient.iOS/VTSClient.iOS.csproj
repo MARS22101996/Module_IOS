@@ -171,6 +171,16 @@
     </Compile>
     <InterfaceDefinition Include="Views\Vacations\CustomCells\MonkeyCell.xib" />
     <InterfaceDefinition Include="Views\Vacations\MonkeysView.xib" />
+    <InterfaceDefinition Include="Views\VacationTable\VacationTableViewCell.xib" />
+    <Compile Include="Views\VacationTable\VacationTableViewCell.cs" />
+    <Compile Include="Views\VacationTable\VacationTableViewCell.designer.cs">
+      <DependentUpon>VacationTableViewCell.cs</DependentUpon>
+    </Compile>
+    <InterfaceDefinition Include="Views\VacationTable\VacationTableView.xib" />
+    <Compile Include="Views\VacationTable\VacationTableView.cs" />
+    <Compile Include="Views\VacationTable\VacationTableView.designer.cs">
+      <DependentUpon>VacationTableView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -320,6 +330,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Test\" />
+    <Folder Include="Views\VacationTable\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
