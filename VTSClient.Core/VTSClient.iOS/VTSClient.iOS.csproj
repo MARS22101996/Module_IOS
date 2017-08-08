@@ -109,6 +109,14 @@
     <Compile Include="Infrastructure\VacationTypeSetting.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Views\Vacations\CustomCells\MonkeyCell.cs" />
+    <Compile Include="Views\Vacations\CustomCells\MonkeyCell.designer.cs">
+      <DependentUpon>MonkeyCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Vacations\MonkeysView.cs" />
+    <Compile Include="Views\Vacations\MonkeysView.designer.cs">
+      <DependentUpon>MonkeysView.cs</DependentUpon>
+    </Compile>
     <InterfaceDefinition Include="Cells\VacationTableCell.xib" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist" />
@@ -157,11 +165,12 @@
     <Compile Include="Setup.cs" />
     <None Include="Main.storyboard" />
     <InterfaceDefinition Include="Views\Login\LoginView.xib" />
-    <Compile Include="Test\Monkey.cs" />
     <Compile Include="Views\Login\LoginView.cs" />
     <Compile Include="Views\Login\LoginView.designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
+    <InterfaceDefinition Include="Views\Vacations\CustomCells\MonkeyCell.xib" />
+    <InterfaceDefinition Include="Views\Vacations\MonkeysView.xib" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -309,6 +318,8 @@
       <Name>VTSClient.DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Test\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

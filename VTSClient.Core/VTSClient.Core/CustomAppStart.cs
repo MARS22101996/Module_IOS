@@ -1,5 +1,6 @@
 ﻿using System;
 using MvvmCross.Core.ViewModels;
+using VTSClient.Core.Test;
 using VTSClient.Core.ViewModels;
 
 namespace VTSClient.Core
@@ -10,7 +11,7 @@ namespace VTSClient.Core
 	{
 		public void Start(object hint = null)
 		{					
-			ShowViewModel<LoginPageViewModel>();
+			ShowViewModel<MonkeysViewModel>();
 		}
 	}
 }
