@@ -2,9 +2,13 @@
 using Autofac;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Localization;
+using MvvmCross.Platform;
+using VTSClient.Bll.Services;
 using VTSClient.BLL.Dto;
 using VTSClient.BLL.Interfaces;
+using VTSClient.Core.Infrastructure.Automapper;
 using VTSClient.Core.Infrastructure.DI;
+using VTSClient.DAL.Repositories;
 
 namespace VTSClient.Core.ViewModels
 {
@@ -14,17 +18,28 @@ namespace VTSClient.Core.ViewModels
 
 		private IMvxCommand _signInCommand;
 
-		public string LoginTextValue { get; private set; }
+        private string _loginTextValue;
+        public string LoginTextValue { get{
+                return _loginTextValue;
+            }  
+            set
+            {
+                _loginTextValue = value;
 
-		public string PasswordTextValue { get; private set; }
+                RaisePropertyChanged(() => LoginTextValue);
+            } }
 
-		public string ErrorTextValue { get; private set; }
+		public string PasswordTextValue { get; set; }
+
+		public string ErrorTextValue { get;  set; }
 
 		public string ErrorBackgroundColor { get; private set; }
 
 		public LoginPageViewModel()
 		{
-			_loginService = DISSetup.Container.Resolve<IAccountService>();
+            AutoMapperCoreConfiguration.Configure();
+            var repo = new UserRepository();
+			_loginService = new AccountService(repo);
 		}
 
 		public IMvxCommand SignInCommand
@@ -52,6 +67,7 @@ namespace VTSClient.Core.ViewModels
 			if (string.IsNullOrEmpty(LoginTextValue) || string.IsNullOrEmpty(PasswordTextValue))
 			{
 				ErrorTextValue = "The login or password is empty!";
+
 				return false;
 			}
 			return true;

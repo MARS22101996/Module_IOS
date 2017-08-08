@@ -1,4 +1,4 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Visual Studio to store outlets and
 // actions made in the UI designer. If it is removed, they will be lost.
@@ -7,34 +7,25 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace VTSClient.iOS
+namespace VTSClient.iOS.Views.Login
 {
-	[Register ("LoginPageView")]
-	partial class LoginPageView
+	[Register ("LoginView")]
+	partial class LoginView
 	{
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		UIKit.UILabel ErrorText { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		UIKit.UITextField LoginText { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		UIKit.UITextField PasswordText { get; set; }
 
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UIKit.UIButton SiginButton { get; set; }
+		UIKit.UIButton SigninButton { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (ErrorText != null) {
-				ErrorText.Dispose ();
-				ErrorText = null;
-			}
-
 			if (LoginText != null) {
 				LoginText.Dispose ();
 				LoginText = null;
@@ -45,9 +36,14 @@ namespace VTSClient.iOS
 				PasswordText = null;
 			}
 
-			if (SiginButton != null) {
-				SiginButton.Dispose ();
-				SiginButton = null;
+			if (SigninButton != null) {
+				SigninButton.Dispose ();
+				SigninButton = null;
+			}
+
+			if (ErrorText != null) {
+				ErrorText.Dispose ();
+				ErrorText = null;
 			}
 		}
 	}

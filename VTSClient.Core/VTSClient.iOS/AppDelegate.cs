@@ -4,6 +4,7 @@ using MvvmCross.iOS.Platform;
 using MvvmCross.Platform;
 using UIKit;
 using VTSClient.Core;
+using VTSClient.iOS.Views;
 
 namespace VTSClient.iOS
 {
@@ -43,14 +44,14 @@ namespace VTSClient.iOS
 			// create a new window instance based on the screen size
 			Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-			var setup = new Setup(this, Window);
+            var setup = new Setup(this, Window);
 
-			setup.Initialize();
+            setup.Initialize();
 
-			var startup = Mvx.Resolve<IMvxAppStart>();
+            var startup = Mvx.Resolve<IMvxAppStart>();
 
-			startup.Start();
-
+            startup.Start();
+           // Window.RootViewController = new MyViewController();
 			// make the window visible
 			Window.MakeKeyAndVisible();
 

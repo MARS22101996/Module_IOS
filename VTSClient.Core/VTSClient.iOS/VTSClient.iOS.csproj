@@ -107,14 +107,6 @@
     <Compile Include="Infrastructure\IOSSetup.cs" />
     <Compile Include="Infrastructure\StoryBoardContainer.cs" />
     <Compile Include="Infrastructure\VacationTypeSetting.cs" />
-    <Compile Include="LoginPageController.cs" />
-    <Compile Include="LoginPageController.designer.cs">
-      <DependentUpon>LoginPageController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginPageView.cs" />
-    <Compile Include="LoginPageView.designer.cs">
-      <DependentUpon>LoginPageView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <InterfaceDefinition Include="Cells\VacationTableCell.xib" />
@@ -135,13 +127,26 @@
     <ImageAsset Include="Resources\Images.xcassets\Splash_bg.imageset\Contents.json" />
     <BundleResource Include="Resources\ITunesArtwork" />
     <BundleResource Include="Resources\ITunesArtwork%402x" />
-    <InterfaceDefinition Include="Main.storyboard" />
-    <InterfaceDefinition Include="LoginViewController.xib" />
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <None Include="packages.config" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
-    <InterfaceDefinition Include="LoginPageView.xib" />
     <Compile Include="Setup.cs" />
+    <InterfaceDefinition Include="Views\LoginPageViewController.xib" />
+    <Compile Include="Views\LoginPageViewController.cs" />
+    <Compile Include="Views\LoginPageViewController.designer.cs">
+      <DependentUpon>LoginPageViewController.cs</DependentUpon>
+    </Compile>
+    <None Include="Main.storyboard" />
+    <InterfaceDefinition Include="Views\MyViewController.xib" />
+    <Compile Include="Views\MyViewController.cs" />
+    <Compile Include="Views\MyViewController.designer.cs">
+      <DependentUpon>MyViewController.cs</DependentUpon>
+    </Compile>
+    <InterfaceDefinition Include="Views\Login\LoginView.xib" />
+    <Compile Include="Views\Login\LoginView.cs" />
+    <Compile Include="Views\Login\LoginView.designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -242,6 +247,10 @@
       <Project>{5c7afdcc-54f8-45de-9053-a050b363cd1c}</Project>
       <Name>VTSClient.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

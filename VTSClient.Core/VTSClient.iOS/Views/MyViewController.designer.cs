@@ -8,28 +8,20 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 
-namespace VTSClient.iOS.Cells
+namespace VTSClient.iOS.Views
 {
-    [Register ("VacationTableCell")]
-    partial class VacationTableCell
+    [Register ("MyViewController")]
+    partial class MyViewController
     {
         [Outlet]
-        UIKit.UIImageView ImageType { get; set; }
-
-
-        [Outlet]
-        UIKit.UILabel TextDate { get; set; }
-
-
-        [Outlet]
-        UIKit.UITextView TextStatus { get; set; }
-
-
-        [Outlet]
-        UIKit.UILabel TextType { get; set; }
+        UIKit.UIActivityIndicatorView Test { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (Test != null) {
+                Test.Dispose ();
+                Test = null;
+            }
         }
     }
 }
