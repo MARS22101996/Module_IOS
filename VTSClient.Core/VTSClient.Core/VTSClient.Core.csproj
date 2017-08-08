@@ -40,6 +40,8 @@
     <Compile Include="Infrastructure\DI\CoreSetup.cs" />
     <Compile Include="Infrastructure\DI\DISetup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test\Monkey.cs" />
+    <Compile Include="Test\MonkeysViewModel.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="CustomAppStart.cs" />
     <Compile Include="App.cs" />
