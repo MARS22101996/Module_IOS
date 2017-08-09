@@ -1,7 +1,7 @@
 ﻿using System;
 using Foundation;
 using UIKit;
-using VTSClient.DataAccess.Enums;
+using VTSClient.DAL.Enums;
 
 namespace VTSClient.iOS.DataSources
 {

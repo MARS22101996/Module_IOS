@@ -22,10 +22,6 @@ namespace VTSClient.iOS.Infrastructure
 		{
 			var builder = new ContainerBuilder();
 
-
-			builder.RegisterInstance(new DbLocation())
-				.As<IDbLocation>();
-
 			builder.Register(
 					c => new MapperConfiguration(cfg =>
 					{

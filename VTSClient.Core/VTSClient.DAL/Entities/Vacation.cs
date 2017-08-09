@@ -1,6 +1,6 @@
 ﻿using System;
 using SQLite;
-using VTSClient.DataAccess.Enums;
+using VTSClient.DAL.Enums;
 
 namespace VTSClient.DAL.Entities
 {

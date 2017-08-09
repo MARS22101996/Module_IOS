@@ -7,7 +7,7 @@ using VTSClient.Core.ViewModels;
 
 namespace VTSClient.iOS.Views.Menu
 {
-	public partial class MenuView : MvxViewController<SectionsViewModel>
+	public partial class MenuView : MvxViewController<MenuViewModel>
     {
         public MenuView() : base("MenuView", null)
         {
@@ -16,14 +16,12 @@ namespace VTSClient.iOS.Views.Menu
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-			// Perform any additional setup after loading the view, typically from a nib.
-			//NavigationItem.Title = "Menu";
 
 			var source = new MvxSimpleTableViewSource(SectionTable, "MenuTableViewCell", MenuTableViewCell.Key);
 			
             SectionTable.RowHeight = 50;
 
-			var set = this.CreateBindingSet<MenuView, SectionsViewModel>();
+			var set = this.CreateBindingSet<MenuView, MenuViewModel>();
 
 			set.Bind(source).To(vm => vm.Sections);
 

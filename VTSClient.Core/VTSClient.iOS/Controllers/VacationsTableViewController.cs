@@ -3,7 +3,7 @@ using System;
 using Autofac;
 using UIKit;
 using VTSClient.BLL.Interfaces;
-using VTSClient.DataAccess.Enums;
+using VTSClient.DAL.Enums;
 using VTSClient.iOS.DataSources;
 using VTSClient.iOS.Infrastructure;
 

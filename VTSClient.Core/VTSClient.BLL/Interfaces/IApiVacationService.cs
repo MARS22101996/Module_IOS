@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using VTSClient.BLL.Dto;
-using VTSClient.DataAccess.Enums;
+using VTSClient.DAL.Enums;
 
 namespace VTSClient.BLL.Interfaces
 {

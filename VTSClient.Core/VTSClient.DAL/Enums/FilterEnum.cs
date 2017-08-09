@@ -1,4 +1,4 @@
-﻿namespace VTSClient.DataAccess.Enums
+﻿namespace VTSClient.DAL.Enums
 {
     public enum FilterEnum
     {

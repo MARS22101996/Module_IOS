@@ -5,13 +5,15 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using UIKit;
 using VTSClient.Core.Models;
+using VTSClient.Core.ViewModels;
 
 namespace VTSClient.iOS.Views.Menu
 {
     public partial class MenuTableViewCell : MvxTableViewCell
     {
         public static readonly NSString Key = new NSString("MenuTableViewCell");
-        public static readonly UINib Nib;
+
+	    private static readonly UINib Nib;
 
         static MenuTableViewCell()
         {
@@ -20,10 +22,9 @@ namespace VTSClient.iOS.Views.Menu
 
         protected MenuTableViewCell(IntPtr handle) : base(handle)
         {
-			// Note: this .ctor should not contain any initialization logic.
 			this.DelayBind(() =>
 			{
-				var set = this.CreateBindingSet<MenuTableViewCell, Section>();
+				var set = this.CreateBindingSet<MenuTableViewCell, SectionViewModel>();
 
 				set.Bind(GoToVacations)
                    .For("Title")

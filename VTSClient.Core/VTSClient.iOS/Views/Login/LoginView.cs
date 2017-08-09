@@ -1,7 +1,5 @@
-﻿using System;
-using MvvmCross.Binding.BindingContext;
+﻿using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
-using UIKit;
 using VTSClient.Core.ViewModels;
 
 namespace VTSClient.iOS.Views.Login
@@ -15,7 +13,7 @@ namespace VTSClient.iOS.Views.Login
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            // Perform any additional setup after loading the view, typically from a nib.
+           
             ApplyBindings();
         }
 
@@ -25,7 +23,7 @@ namespace VTSClient.iOS.Views.Login
             // Release any cached data, images, etc that aren't in use.
         }
 
-		protected void ApplyBindings()
+	    private void ApplyBindings()
 		{
 			var bindingSet = this.CreateBindingSet<LoginView, LoginPageViewModel>();
 

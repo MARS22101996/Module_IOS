@@ -20,7 +20,7 @@ namespace VTSClient.Bll.Services
         {
             var user = Mapper.Map<User>(login);
 
-            string token = await _userRepository.Login(user);
+            var token = await _userRepository.Login(user);
 
             return token;
         }

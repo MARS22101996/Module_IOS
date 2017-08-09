@@ -1,13 +1,9 @@
 ﻿using System.Threading.Tasks;
-using Autofac;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Localization;
-using MvvmCross.Platform;
 using VTSClient.Bll.Services;
 using VTSClient.BLL.Dto;
 using VTSClient.BLL.Interfaces;
 using VTSClient.Core.Infrastructure.Automapper;
-using VTSClient.Core.Infrastructure.DI;
 using VTSClient.DAL.Repositories;
 
 namespace VTSClient.Core.ViewModels
@@ -18,46 +14,37 @@ namespace VTSClient.Core.ViewModels
 
 		private IMvxCommand _signInCommand;
 
-        private string _loginTextValue;
-
-        public string LoginTextValue { get{
-                return _loginTextValue;
-            }  
-            set
-           {
-                _loginTextValue = value;
-
-                RaisePropertyChanged(() => LoginTextValue);
-            } }
+        public string LoginTextValue { get; set; }
 
 		public string PasswordTextValue { get; set; }
 
 		public string ErrorTextValue { get;  set; }
 
-		public string ErrorBackgroundColor { get; private set; }
+		public string ErrorBackgroundColor { get;  set; }
 
 		public LoginPageViewModel()
 		{
             AutoMapperCoreConfiguration.Configure();
+
             var repo = new UserRepository();
+
 			_loginService = new AccountService(repo);
 		}
 
-        public IMvxCommand SignInCommand => _signInCommand ??
-                    (_signInCommand = new MvxCommand(
-                        () =>
-                        {
-                            if (!IsFieldsCorrect()) return;
+		public IMvxCommand SignInCommand => _signInCommand ??
+		                                    (_signInCommand = new MvxCommand(
+			                                    () =>
+			                                    {
+				                                    if (!IsFieldsCorrect()) return;
 
-                            var status = LoginUser().Result;
+				                                    var status = LoginUser().Result;
 
-                            if (!status) return;
+				                                    if (!status) return;
 
-                            ShowViewModel<VacationViewModel>();
+				                                    ShowViewModel<MenuViewModel>();
+			                                    }));
 
-                        }));
-
-        private bool IsFieldsCorrect()
+		private bool IsFieldsCorrect()
 		{
 			if (string.IsNullOrEmpty(LoginTextValue) || string.IsNullOrEmpty(PasswordTextValue))
 			{

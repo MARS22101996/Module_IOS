@@ -6,7 +6,8 @@ using MvvmCross.Binding.iOS.Views;
 using UIKit;
 using VTSClient.BLL.Dto;
 using VTSClient.DAL.Entities;
-using VTSClient.iOS.Infrastracture;
+using VTSClient.DAL.Enums;
+using VTSClient.iOS.Infrastructure;
 
 namespace VTSClient.iOS.Views.VacationTable
 {
@@ -21,18 +22,18 @@ namespace VTSClient.iOS.Views.VacationTable
         }
 
         protected VacationTableViewCell(IntPtr handle) : base(handle)
-        {
-			//var imageViewLoader = new MvxImageViewLoader(() => monkeyImage);
-
-			// Note: this .ctor should not contain any initialization logic.
+		{ 
 			this.DelayBind(() =>
 			{   
                 var set = this.CreateBindingSet<VacationTableViewCell, VacationDto>();
-				this.VacationPicture.Image = VacationTypeSetting.GetPicture(DataAccess.Enums.VacationType.LeaveWithoutPay);				
-                //set.Bind(VacationPicture).To(m => VacationTypeSetting.GetPicture(m.VacationType));
+
+				VacationPicture.Image = VacationTypeSetting.GetPicture(VacationType.LeaveWithoutPay);
+               
 				set.Bind(Date).To(m => m.Period);
+
 				set.Bind(Status).To(m => m.VacationStatus);
-				set.Bind(Type).To(m => m.VacationType);				
+
+				set.Bind(Type).To(m => m.VacationType);
 				set.Apply();
 			});
         }		

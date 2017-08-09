@@ -2,7 +2,7 @@
 using Foundation;
 using UIKit;
 using VTSClient.BLL.Dto;
-using VTSClient.iOS.Infrastracture;
+using VTSClient.iOS.Infrastructure;
 
 namespace VTSClient.iOS.Cells
 {

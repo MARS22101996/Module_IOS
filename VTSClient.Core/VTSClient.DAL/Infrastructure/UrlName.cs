@@ -10,5 +10,14 @@
 
             return vacationUrl;
         }
-    }
+
+		public static string GetAccountUrl()
+		{
+			const string hostUrl = "http://localhost:5000";
+
+			const string vacationUrl = hostUrl + "/vts/signin";
+
+			return vacationUrl;
+		}
+	}
 }

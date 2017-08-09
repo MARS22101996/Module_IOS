@@ -4,7 +4,7 @@ using System.Linq;
 using Autofac;
 using VTSClient.BLL.Dto;
 using VTSClient.BLL.Interfaces;
-using VTSClient.DataAccess.Enums;
+using VTSClient.DAL.Enums;
 using VTSClient.Tests.Infrastructure;
 
 namespace VTSClient.Tests

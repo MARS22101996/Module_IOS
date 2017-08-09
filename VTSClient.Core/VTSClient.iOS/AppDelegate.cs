@@ -3,8 +3,6 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.Platform;
 using UIKit;
-using VTSClient.Core;
-using VTSClient.iOS.Views;
 
 namespace VTSClient.iOS
 {
@@ -21,7 +19,6 @@ namespace VTSClient.iOS
             set;
         }
 
-		UIWindow _window;
 		public static UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);
 
 		public static UIViewController InitialViewController;
@@ -30,7 +27,6 @@ namespace VTSClient.iOS
 		{
 			app.SetStatusBarHidden(false, true);
 
-			// create a new window instance based on the screen size
 			Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
             var setup = new Setup(this, Window);
@@ -40,8 +36,7 @@ namespace VTSClient.iOS
             var startup = Mvx.Resolve<IMvxAppStart>();
 
             startup.Start();
-           // Window.RootViewController = new MyViewController();
-			// make the window visible
+
 			Window.MakeKeyAndVisible();
 
 			return true;

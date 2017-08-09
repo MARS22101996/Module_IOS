@@ -1,7 +1,7 @@
 ﻿using UIKit;
-using VTSClient.DataAccess.Enums;
+using VTSClient.DAL.Enums;
 
-namespace VTSClient.iOS.Infrastracture
+namespace VTSClient.iOS.Infrastructure
 {
 	public static class VacationTypeSetting
 	{

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VTSClient.DataAccess.Enums;
+﻿using VTSClient.DAL.Enums;
 
 namespace VTSClient.Core.Models
 {

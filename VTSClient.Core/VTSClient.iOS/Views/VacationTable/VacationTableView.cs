@@ -16,25 +16,22 @@ namespace VTSClient.iOS.Views.VacationTable
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-			// Perform any additional setup after loading the view, typically from a nib.
 
             NavigationItem.Title = "All Requests";
 
 			var source = new MvxSimpleTableViewSource(VacationTable, "VacationTableViewCell", VacationTableViewCell.Key);
+
 			VacationTable.RowHeight = 50;
 
 			var set = this.CreateBindingSet<VacationTableView, VacationViewModel>();
+
 			set.Bind(source).To(vm => vm.Vacations);
+
 			set.Apply();
 
 			VacationTable.Source = source;
-			VacationTable.ReloadData();
-        }
 
-        public override void DidReceiveMemoryWarning()
-        {
-            base.DidReceiveMemoryWarning();
-            // Release any cached data, images, etc that aren't in use.
+			VacationTable.ReloadData();
         }
     }
 }

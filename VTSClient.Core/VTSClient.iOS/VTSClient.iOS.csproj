@@ -102,7 +102,6 @@
     </Compile>
     <Compile Include="DataSources\MenuTableViewSource.cs" />
     <Compile Include="DataSources\VacationsDataSource.cs" />
-    <Compile Include="Infrastructure\DbLocation.cs" />
     <Compile Include="Infrastructure\Extensions\DateTimeExtensions.cs" />
     <Compile Include="Infrastructure\IOSSetup.cs" />
     <Compile Include="Infrastructure\StoryBoardContainer.cs" />
@@ -328,9 +327,6 @@
       <Name>VTSClient.DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\VacationTable\" />
-    <Folder Include="Views\Menu\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

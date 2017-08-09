@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using VTSClient.BLL.Dto;
 using VTSClient.BLL.Interfaces;
-using VTSClient.DataAccess.Enums;
 using VTSClient.DAL.Entities;
+using VTSClient.DAL.Enums;
 using VTSClient.DAL.Infrastructure;
 using VTSClient.DAL.Interfaces;
 
@@ -38,11 +38,10 @@ namespace VTSClient.BLL.Services
 			switch (type)
 			{
 				case FilterEnum.Closed:
-                    var test = Mapper.Map<IEnumerable<VacationDto>>(vacations.Where(x => x.VacationStatus == VacationStatus.Closed));
 					return Mapper.Map<IEnumerable<VacationDto>>(vacations.Where(x => x.VacationStatus == VacationStatus.Closed));
 
 				case FilterEnum.Opened:
-					return Mapper.Map<IEnumerable<VacationDto>>(vacations.Where(x => x.VacationStatus !=VacationStatus.Closed));
+					return Mapper.Map<IEnumerable<VacationDto>>(vacations.Where(x => x.VacationStatus != VacationStatus.Closed));
 
 				default:
 					return Mapper.Map<IEnumerable<VacationDto>>(vacations);

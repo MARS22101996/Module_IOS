@@ -1,7 +1,7 @@
 ﻿using System;
 using Foundation;
 
-namespace VTSClient.iOS.Infrastracture.Extensions
+namespace VTSClient.iOS.Infrastructure.Extensions
 {
 	public static class DateTimeExtensions
 	{
