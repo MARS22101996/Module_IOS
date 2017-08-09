@@ -19,12 +19,13 @@
     <resources>
         <image name="Splash_bg" width="1080" height="1920"/>
         <image name="Login_bg" width="1080" height="1920"/>
-        <image name="Default-568h.png" width="320" height="568"/>
         <image name="Icon_Request_Blue" width="90" height="90"/>
         <image name="Icon_Request_Dark" width="90" height="90"/>
         <image name="Icon_Request_Gray" width="90" height="90"/>
         <image name="Icon_Request_Green" width="90" height="90"/>
         <image name="Icon_Request_Plum" width="90" height="90"/>
         <image name="Avatar_Ark" width="384" height="348"/>
+        <image name="ITunesArtwork" width="512" height="512"/>
+        <image name="ITunesArtwork@2x" width="512" height="512"/>
     </resources>
 </document>

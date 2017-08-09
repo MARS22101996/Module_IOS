@@ -18,38 +18,60 @@
                 <rect key="frame" x="0.0" y="0.0" width="327" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9D1-Pt-EXU">
-                        <rect key="frame" x="0.0" y="0.0" width="54" height="44"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bxg-z0-v0h">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
+                        <accessibility key="accessibilityConfiguration" identifier="ImageType"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Fq2-VL-xkQ"/>
+                            <constraint firstAttribute="height" constant="44" id="zn3-94-m7R"/>
+                        </constraints>
                     </imageView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="status" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NDw-y4-Zco">
-                        <rect key="frame" x="238" y="0.0" width="82" height="44"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="status" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zw-tV-Zeb">
+                        <rect key="frame" x="262" y="11" width="80" height="33"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="TextStatus"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="rcG-bB-phE"/>
+                        </constraints>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt8-Jx-dBq">
-                        <rect key="frame" x="112" y="22" width="84" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDc-sR-U5t">
+                        <rect key="frame" x="50" y="26" width="212" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="36e-R6-1nk"/>
+                            <constraint firstAttribute="width" constant="212" id="U9E-Lw-blc"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyq-oh-1y9">
-                        <rect key="frame" x="112" y="0.0" width="82" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAY 18 - MAY 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3b-TX-tLT">
+                        <rect key="frame" x="50" y="0.0" width="212" height="26"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.23137254900000001" green="0.76862745099999996" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="bxg-z0-v0h" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" id="4rm-53-kgl"/>
+                    <constraint firstItem="mDc-sR-U5t" firstAttribute="top" secondItem="Q3b-TX-tLT" secondAttribute="bottom" id="77J-z0-RQ9"/>
+                    <constraint firstItem="mDc-sR-U5t" firstAttribute="trailing" secondItem="Q3b-TX-tLT" secondAttribute="trailing" id="AfQ-Z2-1ZU"/>
+                    <constraint firstItem="bxg-z0-v0h" firstAttribute="top" secondItem="Q3b-TX-tLT" secondAttribute="top" id="Otd-fO-p49"/>
+                    <constraint firstItem="9Zw-tV-Zeb" firstAttribute="leading" secondItem="mDc-sR-U5t" secondAttribute="trailing" id="ZjF-uH-4tW"/>
+                    <constraint firstItem="Q3b-TX-tLT" firstAttribute="leading" secondItem="bxg-z0-v0h" secondAttribute="trailing" id="lig-5g-z6O"/>
+                    <constraint firstItem="bxg-z0-v0h" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="nZ5-2l-5cG"/>
+                    <constraint firstItem="bxg-z0-v0h" firstAttribute="bottom" secondItem="9Zw-tV-Zeb" secondAttribute="bottom" id="ofM-9N-mEg"/>
+                    <constraint firstItem="mDc-sR-U5t" firstAttribute="leading" secondItem="Q3b-TX-tLT" secondAttribute="leading" id="ulL-va-qOc"/>
+                    <constraint firstItem="bxg-z0-v0h" firstAttribute="bottom" secondItem="mDc-sR-U5t" secondAttribute="bottom" id="zfC-VM-Hq6"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="ImageType" destination="9D1-Pt-EXU" id="jOu-Ih-xLx"/>
-                <outlet property="TextDate" destination="Fyq-oh-1y9" id="oVm-Wv-mqj"/>
-                <outlet property="TextStatus" destination="NDw-y4-Zco" id="CtR-2p-HcT"/>
-                <outlet property="TextType" destination="Vt8-Jx-dBq" id="lTD-sF-bWS"/>
+                <outlet property="Date" destination="Q3b-TX-tLT" id="8ox-Lt-jZz"/>
+                <outlet property="Status" destination="9Zw-tV-Zeb" id="5Sb-s5-lrr"/>
+                <outlet property="Type" destination="mDc-sR-U5t" id="Glh-90-662"/>
+                <outlet property="VacationPicture" destination="bxg-z0-v0h" id="8Ur-p6-uWc"/>
             </connections>
             <point key="canvasLocation" x="28.5" y="52"/>
         </tableViewCell>

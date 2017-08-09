@@ -21,7 +21,7 @@ namespace VTSClient.iOS.Views.VacationTable
 			NavigationItem.Title = "Vacations";
 
 			var source = new MvxSimpleTableViewSource(VacationTable, "VacationTableViewCell", VacationTableViewCell.Key);
-			VacationTable.RowHeight = 130;
+			VacationTable.RowHeight = 50;
 
 			var set = this.CreateBindingSet<VacationTableView, VacationViewModel>();
 			set.Bind(source).To(vm => vm.Vacations);

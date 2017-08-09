@@ -1,6 +1,7 @@
 ﻿using System;
 using VTSClient.DataAccess.Enums;
 
+
 namespace VTSClient.BLL.Dto
 {
     public class VacationDto
@@ -18,5 +19,13 @@ namespace VTSClient.BLL.Dto
         public VacationStatus VacationStatus { get; set; }
 
         public VacationType VacationType { get; set; }
+
+		public virtual string Period
+		{
+			get
+			{
+				return $"{Start.Date.ToString("d")} - {End.Date.ToString("d")}";
+			}
+		}
     }
 }
