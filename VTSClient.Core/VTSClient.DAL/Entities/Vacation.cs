@@ -1,5 +1,6 @@
 ﻿using System;
 using SQLite;
+using VTSClient.DataAccess.Enums;
 
 namespace VTSClient.DAL.Entities
 {
@@ -17,8 +18,8 @@ namespace VTSClient.DAL.Entities
 
         public string CreatedBy { get; set; }
 
-        public int VacationStatus { get; set; }
+        public VacationStatus VacationStatus { get; set; }
 
-        public int VacationType { get; set; }
+        public VacationType VacationType { get; set; }
     }
 }

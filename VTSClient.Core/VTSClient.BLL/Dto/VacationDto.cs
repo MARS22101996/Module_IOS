@@ -24,7 +24,7 @@ namespace VTSClient.BLL.Dto
 		{
 			get
 			{
-				return $"{Start.Date.ToString("d")} - {End.Date.ToString("d")}";
+				return $"{Start.Date:d} - {End.Date:d}";
 			}
 		}
     }

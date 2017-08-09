@@ -32,13 +32,9 @@ namespace VTSClient.iOS.Views.Menu
 			SectionTable.Source = source;
 
 			SectionTable.ReloadData();
-        }
 
-        public override void DidReceiveMemoryWarning()
-        {
-            base.DidReceiveMemoryWarning();
-            // Release any cached data, images, etc that aren't in use.
-        }
+			NavigationItem.RightBarButtonItem = new UIBarButtonItem(UIBarButtonSystemItem.Add);
+		}
     }
 }
 

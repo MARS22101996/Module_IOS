@@ -35,6 +35,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Enums\FilterEnum.cs" />
+    <Compile Include="Enums\VacationStatus.cs" />
+    <Compile Include="Enums\VacationType.cs" />
     <Compile Include="Infrastructure\DbNameSettings.cs" />
     <Compile Include="Entities\Vacation.cs" />
     <Compile Include="Infrastructure\Interfaces\IDbLocation.cs" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using MvvmCross.Core.ViewModels;
 using VTSClient.Core.ViewModels;
+using VTSClient.DataAccess.Enums;
 
 namespace VTSClient.Core.Models
 {
@@ -11,11 +12,13 @@ namespace VTSClient.Core.Models
 		private IMvxCommand _goToVacationsCommand;
 
 		public IMvxCommand GoToVacationsCommand => _goToVacationsCommand ??
-		   (_goToVacationsCommand = new MvxCommand(
-			   () =>
-			   {
-				   ShowViewModel<VacationViewModel>();
-
-			   }));
-    }
+		                                           (_goToVacationsCommand = new MvxCommand(
+			                                           () =>
+			                                           {
+				                                           ShowViewModel<VacationViewModel>(new VacationData()
+				                                           {
+					                                           VacationStatus = FilterEnum.Closed
+				                                           });
+			                                           }));
+	}
 }
