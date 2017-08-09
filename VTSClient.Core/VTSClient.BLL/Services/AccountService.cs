@@ -19,6 +19,7 @@ namespace VTSClient.Bll.Services
         public async Task<string> Login(LoginDto login)
         {
             var user = Mapper.Map<User>(login);
+
             string token = await _userRepository.Login(user);
 
             return token;

@@ -5,20 +5,34 @@ using VTSClient.DataAccess.Enums;
 
 namespace VTSClient.Core.Models
 {
-    public class Section: MvxViewModel
+    public class Section : MvxViewModel
     {
-		public string Name { get; set; }
+        public string Name { get; set; }
 
-		private IMvxCommand _goToVacationsCommand;
+        private IMvxCommand _goToVacationsCommand;
 
-		public IMvxCommand GoToVacationsCommand => _goToVacationsCommand ??
-		                                           (_goToVacationsCommand = new MvxCommand(
-			                                           () =>
-			                                           {
-				                                           ShowViewModel<VacationViewModel>(new VacationData()
-				                                           {
-					                                           VacationStatus = FilterEnum.Closed
-				                                           });
-			                                           }));
-	}
+        public IMvxCommand GoToVacationsCommand => _goToVacationsCommand ??
+                                                   (_goToVacationsCommand = new MvxCommand(
+                                                       () =>
+                                                       {
+                                                           ShowViewModel<VacationViewModel>(new VacationData()
+                                                           {
+                                                               VacationStatus = GetType()
+                                                           });
+                                                       }));
+
+        public FilterEnum GetType()
+        {
+            switch (Name)
+            {
+                case "Closed":
+                    return FilterEnum.Closed;
+                case "Open":
+                    return FilterEnum.Opened;
+                default:
+                    return FilterEnum.All;
+            }
+        }
+    }
 }
+
