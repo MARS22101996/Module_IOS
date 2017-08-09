@@ -6,7 +6,9 @@ namespace VTSClient.Core.ViewModels
 {
     public class SectionsViewModel : MvxViewModel
     {
-       public MvxObservableCollection<Section> Sections { get; set; } = new MvxObservableCollection<Section>();
+        public MvxObservableCollection<Section> Sections { get; set; } = new MvxObservableCollection<Section>();
+
+        private IMvxCommand _goToVacationsCommand;
 
 		public SectionsViewModel()
 		{
@@ -16,5 +18,13 @@ namespace VTSClient.Core.ViewModels
 
             Sections.Add(new Section { Name = "Closed" });
         }
+
+		public IMvxCommand SignInCommand => _goToVacationsCommand ??
+				   (_goToVacationsCommand = new MvxCommand(
+					   () =>
+					   {						  
+						   ShowViewModel<VacationViewModel>();
+
+					   }));
     }
 }

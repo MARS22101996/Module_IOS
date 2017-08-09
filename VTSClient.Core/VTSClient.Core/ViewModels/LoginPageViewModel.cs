@@ -19,6 +19,7 @@ namespace VTSClient.Core.ViewModels
 		private IMvxCommand _signInCommand;
 
         private string _loginTextValue;
+
         public string LoginTextValue { get{
                 return _loginTextValue;
             }  
