@@ -42,27 +42,21 @@ namespace VTSClient.Core.ViewModels
 			_loginService = new AccountService(repo);
 		}
 
-		public IMvxCommand SignInCommand
-		{
-			get
-			{
-				return _signInCommand ??
-					(_signInCommand = new MvxCommand(
-						async () =>
-						{
-							if (!IsFieldsCorrect()) return;
+        public IMvxCommand SignInCommand => _signInCommand ??
+                    (_signInCommand = new MvxCommand(
+                        () =>
+                        {
+                            if (!IsFieldsCorrect()) return;
 
-							var status = await LoginUser();
+                            var status = LoginUser().Result;
 
-							if (!status) return;
+                            if (!status) return;
 
+                            ShowViewModel<VacationViewModel>();
 
+                        }));
 
-						}));
-			}
-		}
-
-		private bool IsFieldsCorrect()
+        private bool IsFieldsCorrect()
 		{
 			if (string.IsNullOrEmpty(LoginTextValue) || string.IsNullOrEmpty(PasswordTextValue))
 			{
