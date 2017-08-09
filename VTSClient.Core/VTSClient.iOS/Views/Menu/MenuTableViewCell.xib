@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,24 +19,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcr-w3-h0J">
-                        <rect key="frame" x="255" y="8" width="46" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcr-w3-h0J">
+                        <rect key="frame" x="180" y="0.0" width="100" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="4Vk-EZ-Iyd"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="eDT-x0-zQp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxS-Q1-YNQ">
-                        <rect key="frame" x="33" y="13" width="142" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
+                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Hcr-w3-h0J" secondAttribute="trailing" constant="40" id="ADY-0F-evX"/>
+                    <constraint firstItem="Hcr-w3-h0J" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" id="Ys5-NC-bdi"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Hcr-w3-h0J" secondAttribute="bottom" constant="-10.5" id="lR5-NL-MIY"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="GoToVacations" destination="Hcr-w3-h0J" id="WIE-HV-Sl7"/>
                 <outlet property="TypeCell" destination="YTl-1W-gDM" id="pUe-th-4PG"/>
-                <outlet property="TypeLabel" destination="lxS-Q1-YNQ" id="bS1-tk-J1P"/>
             </connections>
         </tableViewCell>
     </objects>

@@ -25,7 +25,9 @@ namespace VTSClient.iOS.Views.Menu
 			{
 				var set = this.CreateBindingSet<MenuTableViewCell, Section>();
 
-				set.Bind(TypeLabel).To(m => m.Name);
+				set.Bind(GoToVacations)
+                   .For("Title")
+			       .To(vm => vm.Name);
 
 				set.Apply();
 			});

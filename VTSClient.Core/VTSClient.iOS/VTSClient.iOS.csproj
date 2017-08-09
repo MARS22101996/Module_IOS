@@ -329,7 +329,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test\" />
     <Folder Include="Views\VacationTable\" />
     <Folder Include="Views\Menu\" />
   </ItemGroup>

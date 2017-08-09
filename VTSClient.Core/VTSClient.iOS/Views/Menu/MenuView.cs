@@ -17,7 +17,7 @@ namespace VTSClient.iOS.Views.Menu
         {
             base.ViewDidLoad();
 			// Perform any additional setup after loading the view, typically from a nib.
-			NavigationItem.Title = "Menu";
+			//NavigationItem.Title = "Menu";
 
 			var source = new MvxSimpleTableViewSource(SectionTable, "MenuTableViewCell", MenuTableViewCell.Key);
 			

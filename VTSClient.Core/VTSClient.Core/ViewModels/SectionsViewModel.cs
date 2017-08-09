@@ -12,7 +12,7 @@ namespace VTSClient.Core.ViewModels
 		{
             Sections.Add(new Section { Name = "All" }); 
 
-            Sections.Add(new Section { Name = "Opened" }); 
+            Sections.Add(new Section { Name = "Open" }); 
 
             Sections.Add(new Section { Name = "Closed" });
         }

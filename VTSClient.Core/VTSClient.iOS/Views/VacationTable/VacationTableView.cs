@@ -18,7 +18,7 @@ namespace VTSClient.iOS.Views.VacationTable
             base.ViewDidLoad();
 			// Perform any additional setup after loading the view, typically from a nib.
 
-			NavigationItem.Title = "Vacations";
+            NavigationItem.Title = "All Requests";
 
 			var source = new MvxSimpleTableViewSource(VacationTable, "VacationTableViewCell", VacationTableViewCell.Key);
 			VacationTable.RowHeight = 50;
