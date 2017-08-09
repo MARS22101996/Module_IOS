@@ -109,14 +109,6 @@
     <Compile Include="Infrastructure\VacationTypeSetting.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Views\Vacations\CustomCells\MonkeyCell.cs" />
-    <Compile Include="Views\Vacations\CustomCells\MonkeyCell.designer.cs">
-      <DependentUpon>MonkeyCell.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Vacations\MonkeysView.cs" />
-    <Compile Include="Views\Vacations\MonkeysView.designer.cs">
-      <DependentUpon>MonkeysView.cs</DependentUpon>
-    </Compile>
     <InterfaceDefinition Include="Cells\VacationTableCell.xib" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist" />
@@ -169,8 +161,6 @@
     <Compile Include="Views\Login\LoginView.designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
-    <InterfaceDefinition Include="Views\Vacations\CustomCells\MonkeyCell.xib" />
-    <InterfaceDefinition Include="Views\Vacations\MonkeysView.xib" />
     <InterfaceDefinition Include="Views\VacationTable\VacationTableViewCell.xib" />
     <Compile Include="Views\VacationTable\VacationTableViewCell.cs" />
     <Compile Include="Views\VacationTable\VacationTableViewCell.designer.cs">
@@ -180,6 +170,16 @@
     <Compile Include="Views\VacationTable\VacationTableView.cs" />
     <Compile Include="Views\VacationTable\VacationTableView.designer.cs">
       <DependentUpon>VacationTableView.cs</DependentUpon>
+    </Compile>
+    <InterfaceDefinition Include="Views\Menu\MenuView.xib" />
+    <Compile Include="Views\Menu\MenuView.cs" />
+    <Compile Include="Views\Menu\MenuView.designer.cs">
+      <DependentUpon>MenuView.cs</DependentUpon>
+    </Compile>
+    <InterfaceDefinition Include="Views\Menu\MenuTableViewCell.xib" />
+    <Compile Include="Views\Menu\MenuTableViewCell.cs" />
+    <Compile Include="Views\Menu\MenuTableViewCell.designer.cs">
+      <DependentUpon>MenuTableViewCell.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -331,6 +331,7 @@
   <ItemGroup>
     <Folder Include="Test\" />
     <Folder Include="Views\VacationTable\" />
+    <Folder Include="Views\Menu\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

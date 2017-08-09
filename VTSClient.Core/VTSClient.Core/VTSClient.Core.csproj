@@ -46,6 +46,8 @@
     <Compile Include="CustomAppStart.cs" />
     <Compile Include="App.cs" />
     <Compile Include="ViewModels\VacationViewModel.cs" />
+    <Compile Include="ViewModels\SectionsViewModel.cs" />
+    <Compile Include="Models\Section.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
@@ -59,6 +61,9 @@
       <Project>{5C7AFDCC-54F8-45DE-9053-A050B363CD1C}</Project>
       <Name>VTSClient.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
