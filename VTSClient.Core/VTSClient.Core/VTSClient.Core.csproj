@@ -40,6 +40,7 @@
     <Compile Include="Infrastructure\DI\CoreSetup.cs" />
     <Compile Include="Models\VacationData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\DetailViewModel.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="CustomAppStart.cs" />
     <Compile Include="App.cs" />

@@ -75,5 +75,20 @@ namespace VTSClient.BLL.Services
         {
             return _vacationRepository.DeleteAsync<Vacation>(id, UrlName.GetApiUrl());
         }
-    }
+
+		public VacationDto GetExampleVacation()
+		{
+			var vacation = new VacationDto
+			{
+				VacationStatus = VacationStatus.Approved,
+				Id = Guid.NewGuid(),
+				VacationType = VacationType.Undefined,
+				CreatedBy = "Ark",
+				End = DateTime.UtcNow,
+				Start = DateTime.UtcNow
+			};
+
+			return vacation;
+		}
+	}
 }

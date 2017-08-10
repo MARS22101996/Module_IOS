@@ -31,7 +31,6 @@ namespace VTSClient.iOS.Views.Menu
 
 			SectionTable.ReloadData();
 
-			NavigationItem.RightBarButtonItem = new UIBarButtonItem(UIBarButtonSystemItem.Add);
 		}
     }
 }

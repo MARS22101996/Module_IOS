@@ -20,7 +20,10 @@ namespace VTSClient.Core.ViewModels
 
 	    public MvxObservableCollection<VacationDto> Vacations { get; set; } = new MvxObservableCollection<VacationDto>();
 
-        public VacationViewModel()
+
+		private IMvxCommand _addCommand;
+
+		public VacationViewModel()
         {
             AutoMapperCoreConfiguration.Configure();
 
@@ -29,7 +32,14 @@ namespace VTSClient.Core.ViewModels
             _vacationService = new ApiVacationService(repo);
         }
 
-        public override async Task Initialize(VacationData parameter)
+		public IMvxCommand AddCommand => _addCommand ??
+										   (_addCommand = new MvxCommand(
+											   () =>
+											   {
+												   ShowViewModel<DetailViewModel>();
+											   }));
+
+		public override async Task Initialize(VacationData parameter)
         {
             
         }

@@ -30,15 +30,15 @@ namespace VTSClient.iOS
 
 			Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            //var setup = new Setup(this, Window);
+			var setup = new Setup(this, Window);
 
-            //setup.Initialize();
+			setup.Initialize();
 
-            //var startup = Mvx.Resolve<IMvxAppStart>();
+			var startup = Mvx.Resolve<IMvxAppStart>();
 
-            //startup.Start();
+			startup.Start();
 
-            Window.RootViewController = new DetailVacationView();
+			//Window.RootViewController = new DetailVacationView();
 
 			Window.MakeKeyAndVisible();
 

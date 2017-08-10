@@ -1,10 +1,11 @@
-// WARNING
+﻿// WARNING
 //
-// This file has been generated automatically by Visual Studio to store outlets and
-// actions made in the UI designer. If it is removed, they will be lost.
-// Manual changes to this file may not be handled correctly.
+// This file has been generated automatically by Visual Studio from the outlets and
+// actions declared in your storyboard file.
+// Manual changes to this file will not be maintained.
 //
 using Foundation;
+using System;
 using System.CodeDom.Compiler;
 
 namespace VTSClient.iOS.Views.Details
@@ -50,73 +51,9 @@ namespace VTSClient.iOS.Views.Details
 
         [Outlet]
         UIKit.UILabel TypeText { get; set; }
-        
+
         void ReleaseDesignerOutlets ()
         {
-            if (StatusButton != null) {
-                StatusButton.Dispose ();
-                StatusButton = null;
-            }
-
-            if (TypeImageView != null) {
-                TypeImageView.Dispose ();
-                TypeImageView = null;
-            }
-
-            if (Page != null) {
-                Page.Dispose ();
-                Page = null;
-            }
-
-            if (TypeText != null) {
-                TypeText.Dispose ();
-                TypeText = null;
-            }
-
-            if (PageImage != null) {
-                PageImage.Dispose ();
-                PageImage = null;
-            }
-
-            if (StartDay != null) {
-                StartDay.Dispose ();
-                StartDay = null;
-            }
-
-            if (StartMonth != null) {
-                StartMonth.Dispose ();
-                StartMonth = null;
-            }
-
-            if (StartYear != null) {
-                StartYear.Dispose ();
-                StartYear = null;
-            }
-
-            if (EndYear != null) {
-                EndYear.Dispose ();
-                EndYear = null;
-            }
-
-            if (EndMonth != null) {
-                EndMonth.Dispose ();
-                EndMonth = null;
-            }
-
-            if (EndDay != null) {
-                EndDay.Dispose ();
-                EndDay = null;
-            }
-
-            if (DatePickerVacation != null) {
-                DatePickerVacation.Dispose ();
-                DatePickerVacation = null;
-            }
-
-            if (DatePickerToolBar != null) {
-                DatePickerToolBar.Dispose ();
-                DatePickerToolBar = null;
-            }
         }
     }
 }

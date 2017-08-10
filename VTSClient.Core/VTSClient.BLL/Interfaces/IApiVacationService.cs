@@ -19,5 +19,8 @@ namespace VTSClient.BLL.Interfaces
         Task<bool> DeleteVacationByIdAsync(Guid id);
 
 	    Task<IEnumerable<VacationDto>> FilterVacations(FilterEnum type);
+
+	    VacationDto GetExampleVacation();
+
     }
 }

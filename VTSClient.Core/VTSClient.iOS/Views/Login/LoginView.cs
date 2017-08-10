@@ -1,5 +1,6 @@
 ﻿using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
+using UIKit;
 using VTSClient.Core.ViewModels;
 
 namespace VTSClient.iOS.Views.Login
@@ -13,15 +14,14 @@ namespace VTSClient.iOS.Views.Login
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-           
-            ApplyBindings();
+
+			NavigationController.NavigationBar.BarTintColor = new UIColor(red: 0.00f, green: 0.76f, blue: 1.00f, alpha: 1.0f);
+
+			NavigationController.NavigationBar.TintColor = UIColor.White;
+
+			ApplyBindings();
         }
 
-        public override void DidReceiveMemoryWarning()
-        {
-            base.DidReceiveMemoryWarning();
-            // Release any cached data, images, etc that aren't in use.
-        }
 
 	    private void ApplyBindings()
 		{
