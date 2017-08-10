@@ -21,5 +21,29 @@ namespace VTSClient.BLL.Dto
         public VacationType VacationType { get; set; }
 
 		public virtual string Period => $"{Start.Date:d} - {End.Date:d}";
-    }
+
+		public virtual string ImageUrl => GetBoundle(VacationType);
+
+	    private string GetBoundle(VacationType type)
+		{
+			switch (type)
+			{
+				case VacationType.Regular:
+					return "Icon_Request_Green";
+
+				case VacationType.Exceptional:
+					return "Icon_Request_Gray";
+
+				case VacationType.Sick:
+					return "Icon_Request_Plum";
+
+				case VacationType.Overtime:
+					return "Icon_Request_Blue";
+
+				default:
+					return "Icon_Request_Dark";
+			}
+		}
+
+	}
 }
