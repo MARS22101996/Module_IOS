@@ -25,6 +25,12 @@ namespace VTSClient.iOS.Views.Menu
 
 			set.Bind(source).To(vm => vm.Sections);
 
+			var addItem = new UIBarButtonItem(UIBarButtonSystemItem.Add) { Title = "New" };
+
+			set.Bind(addItem).To(vm => vm.AddCommand);
+
+			NavigationItem.RightBarButtonItem = addItem;
+
 			set.Apply();
 
 			SectionTable.Source = source;

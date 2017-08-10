@@ -7,7 +7,6 @@ using VTSClient.BLL.Services;
 using VTSClient.Core;
 using VTSClient.Core.Infrastructure.Automapper;
 using VTSClient.Core.Infrastructure.Automapper.Profiles;
-using VTSClient.DAL.Infrastructure.Interfaces;
 using VTSClient.DAL.Interfaces;
 using VTSClient.DAL.Repositories;
 

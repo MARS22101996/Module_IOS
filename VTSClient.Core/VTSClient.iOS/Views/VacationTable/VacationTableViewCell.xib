@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="327" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
-                <rect key="frame" x="0.0" y="0.0" width="327" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="327" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bxg-z0-v0h">
@@ -76,4 +76,16 @@
             <point key="canvasLocation" x="28.5" y="52"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ITunesArtwork" width="512" height="512"/>
+        <image name="ITunesArtwork@2x" width="512" height="512"/>
+        <image name="Splash_bg" width="1080" height="1920"/>
+        <image name="Login_bg" width="1080" height="1920"/>
+        <image name="Icon_Request_Plum" width="90" height="90"/>
+        <image name="Icon_Request_Green" width="90" height="90"/>
+        <image name="Icon_Request_Gray" width="90" height="90"/>
+        <image name="Icon_Request_Dark" width="90" height="90"/>
+        <image name="Icon_Request_Blue" width="90" height="90"/>
+        <image name="Avatar_Ark" width="384" height="348"/>
+    </resources>
 </document>

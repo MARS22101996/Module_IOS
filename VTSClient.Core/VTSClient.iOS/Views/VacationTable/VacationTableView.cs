@@ -27,10 +27,6 @@ namespace VTSClient.iOS.Views.VacationTable
 
 			set.Bind(source).To(vm => vm.Vacations);
 
-			set.Bind(NavigationItem)
-				.For("RightBarButtonItem")
-				.To(vm => vm.AddCommand);
-
 			var addItem = new UIBarButtonItem(UIBarButtonSystemItem.Add) { Title = "New" };
 			set.Bind(addItem).To(vm => vm.AddCommand);
 			NavigationItem.RightBarButtonItem =  addItem;
