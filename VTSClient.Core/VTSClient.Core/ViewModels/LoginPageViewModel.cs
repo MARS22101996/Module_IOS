@@ -67,6 +67,7 @@ namespace VTSClient.Core.ViewModels
 			if (string.IsNullOrEmpty(token))
 			{
 				ErrorTextValue = "The login or password isn't correct!";
+
 				return false;
 			}
 

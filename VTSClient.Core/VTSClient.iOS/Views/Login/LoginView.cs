@@ -15,11 +15,12 @@ namespace VTSClient.iOS.Views.Login
         {
             base.ViewDidLoad();
 
-			NavigationController.NavigationBar.BarTintColor = new UIColor(red: 0.00f, green: 0.76f, blue: 1.00f, alpha: 1.0f);
+	        NavigationController.NavigationBar.BarTintColor = new UIColor(red: 0.00f, green: 0.76f, blue: 1.00f,
+		        alpha: 1.0f);
 
-			NavigationController.NavigationBar.TintColor = UIColor.White;
+	        NavigationController.NavigationBar.TintColor = UIColor.White;
 
-			ApplyBindings();
+	        ApplyBindings();
         }
 
 

@@ -5,7 +5,6 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using UIKit;
 using VTSClient.BLL.Dto;
-using VTSClient.DAL.Entities;
 using VTSClient.DAL.Enums;
 using VTSClient.iOS.Infrastructure;
 
@@ -34,6 +33,7 @@ namespace VTSClient.iOS.Views.VacationTable
 				set.Bind(Status).To(m => m.VacationStatus);
 
 				set.Bind(Type).To(m => m.VacationType);
+
 				set.Apply();
 			});
         }		

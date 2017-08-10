@@ -1,12 +1,7 @@
-﻿using System;
-using MvvmCross.Binding.BindingContext;
+﻿using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using UIKit;
 using VTSClient.Core.ViewModels;
-using VTSClient.DAL.Entities;
-using VTSClient.DAL.Enums;
-using VTSClient.iOS.Infrastructure;
-using VTSClient.iOS.Views.Login;
 
 namespace VTSClient.iOS.Views.Details
 {

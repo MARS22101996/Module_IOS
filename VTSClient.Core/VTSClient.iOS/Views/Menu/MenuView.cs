@@ -15,27 +15,27 @@ namespace VTSClient.iOS.Views.Menu
 
         public override void ViewDidLoad()
         {
-            base.ViewDidLoad();
+	        base.ViewDidLoad();
 
-			var source = new MvxSimpleTableViewSource(SectionTable, "MenuTableViewCell", MenuTableViewCell.Key);
-			
-            SectionTable.RowHeight = 50;
+	        var source = new MvxSimpleTableViewSource(SectionTable, "MenuTableViewCell", MenuTableViewCell.Key);
 
-			var set = this.CreateBindingSet<MenuView, MenuViewModel>();
+	        SectionTable.RowHeight = 50;
 
-			set.Bind(source).To(vm => vm.Sections);
+	        var set = this.CreateBindingSet<MenuView, MenuViewModel>();
 
-			var addItem = new UIBarButtonItem(UIBarButtonSystemItem.Add) { Title = "New" };
+	        set.Bind(source).To(vm => vm.Sections);
 
-			set.Bind(addItem).To(vm => vm.AddCommand);
+	        var addItem = new UIBarButtonItem(UIBarButtonSystemItem.Add) {Title = "New"};
 
-			NavigationItem.RightBarButtonItem = addItem;
+	        set.Bind(addItem).To(vm => vm.AddCommand);
 
-			set.Apply();
+	        NavigationItem.RightBarButtonItem = addItem;
 
-			SectionTable.Source = source;
+	        set.Apply();
 
-			SectionTable.ReloadData();
+	        SectionTable.Source = source;
+
+	        SectionTable.ReloadData();
 
 		}
     }

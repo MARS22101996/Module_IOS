@@ -59,11 +59,15 @@ namespace VTSClient.Core.ViewModels
 		private void SetData()
 		{
 			StartDay = Vacation.Start.Day.ToString();
+
 			StartMonth = Vacation.Start.ToString("m");
+
 			StartYear = Vacation.Start.Year.ToString();
 
 			EndDay = Vacation.End.Day.ToString();
+
 			EndMonth = Vacation.End.ToString("m");
+
 			EndYear = Vacation.End.Year.ToString();
 
 			StatusButtonSelectedSegment = Vacation.VacationStatus == VacationStatus.Approved ? 0 : 1;

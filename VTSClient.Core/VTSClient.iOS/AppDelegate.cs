@@ -38,8 +38,6 @@ namespace VTSClient.iOS
 
 			startup.Start();
 
-			//Window.RootViewController = new DetailVacationView();
-
 			Window.MakeKeyAndVisible();
 
 			return true;
