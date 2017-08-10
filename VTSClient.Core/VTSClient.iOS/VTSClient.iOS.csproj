@@ -154,7 +154,6 @@
     <None Include="packages.config" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <Compile Include="Setup.cs" />
-    <None Include="Main.storyboard" />
     <InterfaceDefinition Include="Views\Login\LoginView.xib" />
     <Compile Include="Views\Login\LoginView.cs" />
     <Compile Include="Views\Login\LoginView.designer.cs">
@@ -180,6 +179,12 @@
     <Compile Include="Views\Menu\MenuTableViewCell.designer.cs">
       <DependentUpon>MenuTableViewCell.cs</DependentUpon>
     </Compile>
+    <InterfaceDefinition Include="Views\Details\DetailVacationView.xib" />
+    <Compile Include="Views\Details\DetailVacationView.cs" />
+    <Compile Include="Views\Details\DetailVacationView.designer.cs">
+      <DependentUpon>DetailVacationView.cs</DependentUpon>
+    </Compile>
+    <BundleResource Include="Main.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -328,5 +333,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Details\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

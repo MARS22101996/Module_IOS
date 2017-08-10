@@ -3,6 +3,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.Platform;
 using UIKit;
+using VTSClient.iOS.Views.Details;
 
 namespace VTSClient.iOS
 {
@@ -19,7 +20,7 @@ namespace VTSClient.iOS
             set;
         }
 
-		public static UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);
+		//public static UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);
 
 		public static UIViewController InitialViewController;
 
@@ -29,13 +30,15 @@ namespace VTSClient.iOS
 
 			Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            var setup = new Setup(this, Window);
+            //var setup = new Setup(this, Window);
 
-            setup.Initialize();
+            //setup.Initialize();
 
-            var startup = Mvx.Resolve<IMvxAppStart>();
+            //var startup = Mvx.Resolve<IMvxAppStart>();
 
-            startup.Start();
+            //startup.Start();
+
+            Window.RootViewController = new DetailVacationView();
 
 			Window.MakeKeyAndVisible();
 
