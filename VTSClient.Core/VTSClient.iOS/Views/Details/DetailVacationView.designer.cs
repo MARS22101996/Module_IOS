@@ -1,11 +1,10 @@
-﻿// WARNING
+// WARNING
 //
-// This file has been generated automatically by Visual Studio from the outlets and
-// actions declared in your storyboard file.
-// Manual changes to this file will not be maintained.
+// This file has been generated automatically by Visual Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
 //
 using Foundation;
-using System;
 using System.CodeDom.Compiler;
 
 namespace VTSClient.iOS.Views.Details
@@ -13,9 +12,21 @@ namespace VTSClient.iOS.Views.Details
     [Register ("DetailVacationView")]
     partial class DetailVacationView
     {
+        [Outlet]
+        UIKit.UIToolbar DatePickerBar { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIToolbar DatePickerToolbar { get; set; }
 
         [Outlet]
         UIKit.UIDatePicker DatePickerVacation { get; set; }
+
+        [Outlet]
+        UIKit.UIBarButtonItem DateToolBar { get; set; }
+
+        [Outlet]
+        UIKit.UIBarButtonItem DoneButton { get; set; }
 
         [Outlet]
         UIKit.UIButton EndDay { get; set; }
@@ -42,7 +53,7 @@ namespace VTSClient.iOS.Views.Details
         UIKit.UIButton StartYear { get; set; }
 
         [Outlet]
-        UIKit.UISegmentedControl StatusButton { get; set; }
+        UIKit.UISegmentedControl StatusSegment { get; set; }
 
         [Outlet]
         UIKit.UIView TypeImageView { get; set; }
@@ -50,21 +61,48 @@ namespace VTSClient.iOS.Views.Details
         [Outlet]
         UIKit.UILabel TypeText { get; set; }
 
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIToolbar DatePickerToolbar { get; set; }
+        [Action ("ActionLeft:")]
+        partial void ActionLeft (Foundation.NSObject sender);
 
+        [Action ("ActionRight:")]
+        partial void ActionRight (Foundation.NSObject sender);
 
+        [Action ("CancelButtonChoose:")]
+        partial void CancelButtonChoose (Foundation.NSObject sender);
+
+        [Action ("DoneButtonChoose:")]
+        partial void DoneButtonChoose (Foundation.NSObject sender);
+        
         void ReleaseDesignerOutlets ()
         {
-            if (DatePickerToolbar != null) {
-                DatePickerToolbar.Dispose ();
-                DatePickerToolbar = null;
+            if (StatusSegment != null) {
+                StatusSegment.Dispose ();
+                StatusSegment = null;
             }
 
             if (DatePickerVacation != null) {
                 DatePickerVacation.Dispose ();
                 DatePickerVacation = null;
+            }
+
+            if (DoneButton != null) {
+                DoneButton.Dispose ();
+                DoneButton = null;
+            }
+
+            if (DateToolBar != null) {
+                DateToolBar.Dispose ();
+                DateToolBar = null;
+            }
+
+            if (DatePickerBar != null) {
+                DatePickerBar.Dispose ();
+                DatePickerBar = null;
+            }
+
+            if (DatePickerToolbar != null) {
+                DatePickerToolbar.Dispose ();
+                DatePickerToolbar = null;
             }
 
             if (EndDay != null) {
@@ -105,11 +143,6 @@ namespace VTSClient.iOS.Views.Details
             if (StartYear != null) {
                 StartYear.Dispose ();
                 StartYear = null;
-            }
-
-            if (StatusButton != null) {
-                StatusButton.Dispose ();
-                StatusButton = null;
             }
 
             if (TypeImageView != null) {

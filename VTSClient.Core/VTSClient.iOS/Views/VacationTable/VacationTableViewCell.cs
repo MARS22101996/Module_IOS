@@ -27,7 +27,7 @@ namespace VTSClient.iOS.Views.VacationTable
 			{   
                 var set = this.CreateBindingSet<VacationTableViewCell, VacationDto>();
 
-				//VacationPicture.Image = VacationTypeSetting.GetPicture(VacationType.LeaveWithoutPay);
+				VacationPicture.Image = VacationTypeSetting.GetPicture(VacationType.LeaveWithoutPay);
                
 				set.Bind(Date).To(m => m.Period);
 
@@ -35,14 +35,14 @@ namespace VTSClient.iOS.Views.VacationTable
 
 				set.Bind(Type).To(m => m.VacationType);
 
-				set.Bind(VacationPicture)
-				.For("ImagePath")
-				.To(vm => vm.ImageUrl)
-				.WithConversion(
-					"ImageUrl",
-					new ImageUrlParameters(
-						ImageUrlParameters.ImageScaleMode.LandscapeHalfWidth,
-						true));
+				//set.Bind(VacationPicture)
+				//.For("ImagePath")
+				//.To(vm => vm.ImageUrl)
+				//.WithConversion(
+					//"ImageUrl",
+					//new ImageUrlParameters(
+						//ImageUrlParameters.ImageScaleMode.LandscapeHalfWidth,
+						//true));
 
 				set.Apply();
 			});

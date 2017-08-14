@@ -12,6 +12,7 @@ using VTSClient.DAL.Enums;
 using VTSClient.DAL.Repositories;
 using VTSClient.iOS.Infrastructure;
 using VTSClient.iOS.Infrastructure.Extensions;
+using VTSClient.Core.Infrastructure.Extentions;
 
 namespace VTSClient.iOS.Views.Details
 {
@@ -54,6 +55,8 @@ namespace VTSClient.iOS.Views.Details
 
 			SetData();
 
+            HideDatePicker();
+
 			BindEvents();
 		}
 
@@ -61,14 +64,14 @@ namespace VTSClient.iOS.Views.Details
 		{
 			var i = StartDay;
 			StartDay.SetTitle(Vacation.Start.Day.ToString(), UIControlState.Normal);
-			StartMonth.SetTitle(Vacation.Start.ToString("m"), UIControlState.Normal);
+			StartMonth.SetTitle(Vacation.Start.ToShortMonth(), UIControlState.Normal);
 			StartYear.SetTitle(Vacation.Start.Year.ToString(), UIControlState.Normal);
 
 			EndDay.SetTitle(Vacation.End.Day.ToString(), UIControlState.Normal);
-			EndMonth.SetTitle(Vacation.End.ToString("m"), UIControlState.Normal);
+			EndMonth.SetTitle(Vacation.End.ToShortMonth(), UIControlState.Normal);
 			EndYear.SetTitle(Vacation.End.Year.ToString(), UIControlState.Normal);
 
-			StatusButton.SelectedSegment = (Vacation.VacationStatus == VacationStatus.Approved) ? 0 : 1;
+			StatusSegment.SelectedSegment = (Vacation.VacationStatus == VacationStatus.Approved) ? 0 : 1;
 
 			Page.CurrentPage = (int)Vacation.VacationType;
 			PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType);
@@ -84,7 +87,7 @@ namespace VTSClient.iOS.Views.Details
 
 		private void BindEvents()
 		{
-			StatusButton.ValueChanged += ChangeStatus;
+			StatusSegment.ValueChanged += ChangeStatus;
 			Page.ValueChanged += SwipeEvent;
 
 			StartDay.TouchUpInside += StartDateEvent;
@@ -98,7 +101,7 @@ namespace VTSClient.iOS.Views.Details
 
 		private void UnbindEvents()
 		{
-			StatusButton.ValueChanged -= ChangeStatus;
+			StatusSegment.ValueChanged -= ChangeStatus;
 			Page.ValueChanged -= SwipeEvent;
 
 			StartDay.TouchUpInside -= StartDateEvent;
@@ -112,7 +115,7 @@ namespace VTSClient.iOS.Views.Details
 
 		private void ChangeStatus(object s, EventArgs e)
 		{
-			Vacation.VacationStatus = (StatusButton.SelectedSegment == 1) ? VacationStatus.Closed : VacationStatus.Approved;
+			Vacation.VacationStatus = (StatusSegment.SelectedSegment == 1) ? VacationStatus.Closed : VacationStatus.Approved;
 		}
 
 		private void ChangeType()
@@ -159,20 +162,28 @@ namespace VTSClient.iOS.Views.Details
 		{
 			var date = (DateTime)DatePickerVacation.Date;
 			StartDay.SetTitle(date.Day.ToString(), UIControlState.Normal);
-			StartMonth.SetTitle(date.ToString("m"), UIControlState.Normal);
+			StartMonth.SetTitle(date.ToShortMonth(), UIControlState.Normal);
 			StartYear.SetTitle(date.Year.ToString(), UIControlState.Normal);
 			Vacation.Start = date;
 			DatePickerVacation.Hidden = true;
+            DatePickerBar.Hidden = true;
+
+        }
+
+		partial void CancelButtonChoose(Foundation.NSObject sender)
+		{
+			HideDatePicker();
 		}
 
 		private void DatePickerEndButtonEvent()
 		{
 			var date = (DateTime)DatePickerVacation.Date;
 			EndDay.SetTitle(date.Day.ToString(), UIControlState.Normal);
-			EndMonth.SetTitle(date.ToString("m"), UIControlState.Normal);
+			EndMonth.SetTitle(date.ToShortMonth(), UIControlState.Normal);
 			EndYear.SetTitle(date.Year.ToString(), UIControlState.Normal);
 			Vacation.End = date;
 			DatePickerVacation.Hidden = false;
+			DatePickerBar.Hidden = true;
 		}
 
 		private void SwipeEvent(object sender, EventArgs e)
@@ -182,6 +193,31 @@ namespace VTSClient.iOS.Views.Details
 			PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType);
 			TypeText.Text = Enum.GetName(typeof(VacationType), page);
 		}
+
+		partial void ActionRight(Foundation.NSObject sender)
+		{
+			Page.CurrentPage -= 1;
+			ChangeType();
+		}
+
+		partial void ActionLeft(Foundation.NSObject sender)
+		{
+			Page.CurrentPage += 1;
+			ChangeType();
+		}
+
+		partial void DoneButtonChoose(Foundation.NSObject sender)
+		{
+			if (IsStartDate)
+			{
+				DatePickerStartButtonEvent();
+				return;
+			}
+			DatePickerEndButtonEvent();
+
+			HideDatePicker();
+		}
+
 
 		private void ApplyBindings()
 		{
@@ -211,7 +247,7 @@ namespace VTSClient.iOS.Views.Details
 			  .For("Title")
 			   .To(vm => vm.EndYear);
 
-			bindingSet.Bind(StatusButton)
+			bindingSet.Bind(StatusSegment)
 			  .For("SelectedSegment")
 			   .To(vm => vm.StatusButtonSelectedSegment);
 
