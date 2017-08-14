@@ -5,6 +5,7 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using UIKit;
 using VTSClient.BLL.Dto;
+using VTSClient.Core.Models;
 using VTSClient.Core.ValueConverters;
 using VTSClient.DAL.Enums;
 using VTSClient.iOS.Infrastructure;
@@ -25,7 +26,7 @@ namespace VTSClient.iOS.Views.VacationTable
 		{ 
 			this.DelayBind(() =>
 			{   
-                var set = this.CreateBindingSet<VacationTableViewCell, VacationDto>();
+                var set = this.CreateBindingSet<VacationTableViewCell, VacationCoreModel>();
 
 				VacationPicture.Image = VacationTypeSetting.GetPicture(VacationType.LeaveWithoutPay);
                
@@ -35,14 +36,9 @@ namespace VTSClient.iOS.Views.VacationTable
 
 				set.Bind(Type).To(m => m.VacationType);
 
-				//set.Bind(VacationPicture)
-				//.For("ImagePath")
-				//.To(vm => vm.ImageUrl)
-				//.WithConversion(
-					//"ImageUrl",
-					//new ImageUrlParameters(
-						//ImageUrlParameters.ImageScaleMode.LandscapeHalfWidth,
-						//true));
+				set.Bind(DetailButton).To(m => m.VacationType);
+
+				set.Bind(DetailButton).To(m => m.DetailCommand);
 
 				set.Apply();
 			});

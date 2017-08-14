@@ -13,6 +13,8 @@ using VTSClient.DAL.Repositories;
 using VTSClient.iOS.Infrastructure;
 using VTSClient.iOS.Infrastructure.Extensions;
 using VTSClient.Core.Infrastructure.Extentions;
+using VTSClient.Core.Infrastructure.TransportData;
+using VTSClient.Core.Models;
 
 namespace VTSClient.iOS.Views.Details
 {
@@ -22,9 +24,9 @@ namespace VTSClient.iOS.Views.Details
 
 		private readonly IApiVacationService _vacationService;
 
-		private bool IsStartDate;
+		private Guid vacationId;
 
-		//private NSDate date;
+		private bool IsStartDate;
 
 		public DetailVacationView() : base("DetailVacationView", null)
 		{
@@ -34,7 +36,7 @@ namespace VTSClient.iOS.Views.Details
 
 			_vacationService = new ApiVacationService(repo);
 
-			SetVacation();
+
 		}
 
 		public override void ViewDidLoad()
@@ -50,9 +52,11 @@ namespace VTSClient.iOS.Views.Details
 			//SetData();
 
 			//SetNavigationBar();
+
+			var id = TransportData.GetId();
 			ApplyBindings();
 
-			PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType);
+			SetVacation();
 
 			SetNavigationBar();
 
@@ -210,6 +214,7 @@ namespace VTSClient.iOS.Views.Details
 		{
 			var bindingSet = this.CreateBindingSet<DetailVacationView, DetailViewModel>();
 
+
 			bindingSet.Bind(StartDay)
 			   .For("Title")
 			   .To(vm => vm.StartDay);
@@ -276,9 +281,18 @@ namespace VTSClient.iOS.Views.Details
 			bindingSet.Apply();
 		}
 
-		private void SetVacation()
+		private async void SetVacation()
 		{
-			Vacation = _vacationService.GetExampleVacation();
+			var id = TransportData.GetId();
+
+			if (id == default(Guid))
+			{
+				Vacation =  _vacationService.GetExampleVacation();
+			}
+			else
+			{
+				Vacation = await _vacationService.GetVacationByIdAsync(id);
+			}
 		}
 	}
 }

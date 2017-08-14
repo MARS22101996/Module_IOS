@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using VTSClient.BLL.Dto;
+using VTSClient.Core.Models;
 using VTSClient.DAL.Entities;
 
 namespace VTSClient.Core.Infrastructure.Automapper.Profiles
@@ -11,6 +12,8 @@ namespace VTSClient.Core.Infrastructure.Automapper.Profiles
             CreateMap<VacationDto, Vacation>();
 
 			CreateMap<LoginDto, User>();
+
+			CreateMap<VacationDto, VacationCoreModel>();
 		}
     }
 }

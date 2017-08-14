@@ -8,6 +8,7 @@ using VTSClient.BLL.Interfaces;
 using VTSClient.BLL.Services;
 using VTSClient.Core.Infrastructure.Automapper;
 using VTSClient.Core.Infrastructure.Extentions;
+using VTSClient.Core.Infrastructure.TransportData;
 using VTSClient.Core.Models;
 using VTSClient.DAL.Entities;
 using VTSClient.DAL.Enums;
@@ -15,9 +16,10 @@ using VTSClient.DAL.Repositories;
 
 namespace VTSClient.Core.ViewModels
 {
-	public class DetailViewModel : MvxViewModel
+	public class DetailViewModel : MvxViewModel<VacationData>
 	{
 		private readonly IApiVacationService _vacationService;
+
 
 		private IMvxCommand _changeStatusCommand;
 
@@ -82,6 +84,11 @@ namespace VTSClient.Core.ViewModels
 										 (_startDayCommand = new MvxCommand(
 											 StartDateEvent));
 
+		public override async Task Initialize(VacationData parameter)
+		{
+
+		}
+
 		private void StartDateEvent()
 		{
 			var date = Vacation.Start;
@@ -103,6 +110,8 @@ namespace VTSClient.Core.ViewModels
 
 		private void SetData()
 		{
+			TransportData.SetId(Vacation.Id);
+			
 			StartDay = Vacation.Start.Day.ToString();
 
 			StartMonth = Vacation.Start.ToShortMonth();
@@ -122,6 +131,7 @@ namespace VTSClient.Core.ViewModels
 			TypeText = Enum.GetName(typeof(VacationType), 0);
 
 			DatePickerVacationDate = Vacation.Start;
+
 		}
 
 		private void SwipeEvent()
@@ -129,6 +139,11 @@ namespace VTSClient.Core.ViewModels
 			var page = Page;
 			Vacation.VacationType = (VacationType)page;
 			TypeText = Enum.GetName(typeof(VacationType), page);
+		}
+
+		public void Init(VacationData parameter)
+		{
+			TransportData.SetId(parameter.Id);
 		}
 	}
 }

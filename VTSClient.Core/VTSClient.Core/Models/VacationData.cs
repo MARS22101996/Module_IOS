@@ -5,6 +5,7 @@ namespace VTSClient.Core.Models
 {
 	public class VacationData
 	{
+		public Guid Id { get; set; }
 		public FilterEnum VacationStatus { get; set; }
 	}
 }

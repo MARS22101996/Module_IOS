@@ -1,4 +1,4 @@
-// WARNING
+﻿// WARNING
 //
 // This file has been generated automatically by Visual Studio from the outlets and
 // actions declared in your storyboard file.
@@ -28,11 +28,20 @@ namespace VTSClient.iOS.Views.VacationTable
         [Outlet]
         UIKit.UIImageView VacationPicture { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton DetailButton { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (Date != null) {
                 Date.Dispose ();
                 Date = null;
+            }
+
+            if (DetailButton != null) {
+                DetailButton.Dispose ();
+                DetailButton = null;
             }
 
             if (Status != null) {
