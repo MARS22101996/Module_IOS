@@ -24,6 +24,8 @@ namespace VTSClient.iOS.Views.Details
 
 		private bool IsStartDate;
 
+		//private NSDate date;
+
 		public DetailVacationView() : base("DetailVacationView", null)
 		{
 			AutoMapperCoreConfiguration.Configure();
@@ -48,35 +50,35 @@ namespace VTSClient.iOS.Views.Details
 			//SetData();
 
 			//SetNavigationBar();
-			//ApplyBindings();
+			ApplyBindings();
 
+			PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType);
 
 			SetNavigationBar();
 
-			SetData();
+			//SetData();
 
             HideDatePicker();
 
 			BindEvents();
 		}
 
-		private void SetData()
-		{
-			var i = StartDay;
-			StartDay.SetTitle(Vacation.Start.Day.ToString(), UIControlState.Normal);
-			StartMonth.SetTitle(Vacation.Start.ToShortMonth(), UIControlState.Normal);
-			StartYear.SetTitle(Vacation.Start.Year.ToString(), UIControlState.Normal);
+		//private void SetData()
+		//{
+		//	StartDay.SetTitle(Vacation.Start.Day.ToString(), UIControlState.Normal);
+		//	StartMonth.SetTitle(Vacation.Start.ToShortMonth(), UIControlState.Normal);
+		//	StartYear.SetTitle(Vacation.Start.Year.ToString(), UIControlState.Normal);
 
-			EndDay.SetTitle(Vacation.End.Day.ToString(), UIControlState.Normal);
-			EndMonth.SetTitle(Vacation.End.ToShortMonth(), UIControlState.Normal);
-			EndYear.SetTitle(Vacation.End.Year.ToString(), UIControlState.Normal);
+		//	EndDay.SetTitle(Vacation.End.Day.ToString(), UIControlState.Normal);
+		//	EndMonth.SetTitle(Vacation.End.ToShortMonth(), UIControlState.Normal);
+		//	EndYear.SetTitle(Vacation.End.Year.ToString(), UIControlState.Normal);
 
-			StatusSegment.SelectedSegment = (Vacation.VacationStatus == VacationStatus.Approved) ? 0 : 1;
+		//	StatusSegment.SelectedSegment = (Vacation.VacationStatus == VacationStatus.Approved) ? 0 : 1;
 
-			Page.CurrentPage = (int)Vacation.VacationType;
-			PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType);
-			TypeText.Text = Enum.GetName(typeof(VacationType), 0);
-		}
+		//	Page.CurrentPage = (int)Vacation.VacationType;
+		//	PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType);
+		//	TypeText.Text = Enum.GetName(typeof(VacationType), 0);
+		//}
 
 		private void SetNavigationBar()
 		{
@@ -97,20 +99,6 @@ namespace VTSClient.iOS.Views.Details
 			EndDay.TouchUpInside += EndDateEvent;
 			EndMonth.TouchUpInside += EndDateEvent;
 			EndYear.TouchUpInside += EndDateEvent;
-		}
-
-		private void UnbindEvents()
-		{
-			StatusSegment.ValueChanged -= ChangeStatus;
-			Page.ValueChanged -= SwipeEvent;
-
-			StartDay.TouchUpInside -= StartDateEvent;
-			StartMonth.TouchUpInside -= StartDateEvent;
-			StartYear.TouchUpInside -= StartDateEvent;
-
-			EndDay.TouchUpInside -= EndDateEvent;
-			EndMonth.TouchUpInside -= EndDateEvent;
-			EndYear.TouchUpInside -= EndDateEvent;
 		}
 
 		private void ChangeStatus(object s, EventArgs e)
@@ -167,7 +155,6 @@ namespace VTSClient.iOS.Views.Details
 			Vacation.Start = date;
 			DatePickerVacation.Hidden = true;
             DatePickerBar.Hidden = true;
-
         }
 
 		partial void CancelButtonChoose(Foundation.NSObject sender)
@@ -255,9 +242,36 @@ namespace VTSClient.iOS.Views.Details
 				.For("Text")
 				.To(vm => vm.TypeText);
 
-			bindingSet.Bind(Page)
-				.For("CurrentPage")
-				.To(vm => vm.Page);
+			//bindingSet.Bind(Page)
+			//	.For("CurrentPage")
+			//	.To(vm => vm.Page);
+
+			//bindingSet.Bind(StatusSegment)
+			//   .For("ValueChanged")
+			//   .To(vm => vm.ChangeStatusCommand);
+
+			//bindingSet.Bind(DatePickerVacation)
+			//   .For("Hidden")
+			//   .To(vm => vm.IsDatePickerVacation);
+				//.WithConversion("asd");
+
+			//DatePickerVacation.SetDate(date, true);
+
+			//bindingSet.Bind(DatePickerToolbar)
+			//   .For("Hidden")
+			//   .To(vm => vm.IsDatePickerToolbar);
+
+			//bindingSet.Bind(DatePickerVacation)
+			//	.For("Date")
+			//	.To(vm => vm.DatePickerVacationDate);
+
+			//bindingSet.Bind(StartDay) 
+		 //      .To(vm => vm.StartDayCommand);
+
+
+			//bindingSet.Bind(Page)
+			//   .For("ValueChanged")
+			//   .To(vm => vm.SwipeEventCommand);
 
 			bindingSet.Apply();
 		}
