@@ -4,7 +4,7 @@
     {
         public static string GetApiUrl()
         {
-            const string hostUrl = "http://localhost:5000";
+            const string hostUrl = "http://localhost:5002";
 
             const string vacationUrl = hostUrl + "/vts/workflow";
 
@@ -13,7 +13,7 @@
 
 		public static string GetAccountUrl()
 		{
-			const string hostUrl = "http://localhost:5000";
+			const string hostUrl = "http://localhost:5002";
 
 			const string vacationUrl = hostUrl + "/vts/signin";
 

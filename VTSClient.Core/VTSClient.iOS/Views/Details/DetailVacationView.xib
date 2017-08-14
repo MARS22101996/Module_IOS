@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
@@ -13,6 +13,19 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailVacationView">
             <connections>
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+                <outlet property="StartDay" destination="Ul5-aU-X43" id="name-outlet-Ul5-aU-X43"/>
+                <outlet property="StartMonth" destination="TLS-Z9-qY3" id="name-outlet-TLS-Z9-qY3"/>
+                <outlet property="StartYear" destination="kUP-7u-zYN" id="name-outlet-kUP-7u-zYN"/>
+                <outlet property="PageImage" destination="GLJ-Gr-YVh" id="name-outlet-GLJ-Gr-YVh"/>
+                <outlet property="EndDay" destination="I7F-zT-yyX" id="name-outlet-I7F-zT-yyX"/>
+                <outlet property="EndYear" destination="Izo-C7-SaF" id="name-outlet-Izo-C7-SaF"/>
+                <outlet property="EndMonth" destination="PZO-Lv-tyE" id="name-outlet-PZO-Lv-tyE"/>
+                <outlet property="Page" destination="5fi-uE-gBb" id="name-outlet-5fi-uE-gBb"/>
+                <outlet property="TypeText" destination="nSU-4F-Y1V" id="name-outlet-nSU-4F-Y1V"/>
+                <outlet property="DatePickerVacation" destination="yMj-fS-a48" id="name-outlet-yMj-fS-a48"/>
+                <outlet property="DatePickerToolbar" destination="vLZ-YD-VER" id="name-outlet-vLZ-YD-VER"/>
+                <outlet property="TypeImageView" destination="93x-nV-AlN" id="name-outlet-93x-nV-AlN"/>
+                <outlet property="StatusButton" destination="VH1-mb-qOU" id="name-outlet-VH1-mb-qOU"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -83,6 +96,9 @@
                     <state key="normal" title="MAR">
                         <color key="titleColor" red="0.23137254900000001" green="0.76862745099999996" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="UIButtonTLSZ9qY3_TouchUpInside:" destination="-1" id="7" eventType="touchUpInside"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUP-7u-zYN" misplaced="YES">
                     <rect key="frame" x="76" y="387" width="85" height="43"/>

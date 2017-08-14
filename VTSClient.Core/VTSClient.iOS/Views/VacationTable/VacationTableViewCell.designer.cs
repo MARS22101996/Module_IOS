@@ -26,7 +26,7 @@ namespace VTSClient.iOS.Views.VacationTable
 
 
         [Outlet]
-		VTSClient.iOS.Controls.ImageLoadingView VacationPicture { get; set; }
+        UIKit.UIImageView VacationPicture { get; set; }
 
         void ReleaseDesignerOutlets ()
         {

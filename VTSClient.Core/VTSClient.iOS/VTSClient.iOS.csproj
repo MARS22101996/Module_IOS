@@ -84,6 +84,7 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\Extensions\DateTimeExtensions.cs" />
     <Compile Include="Infrastructure\IOSSetup.cs" />
     <Compile Include="Infrastructure\VacationTypeSetting.cs" />
     <Compile Include="Main.cs" />
@@ -163,7 +164,6 @@
     <Compile Include="Views\Details\DetailVacationView.designer.cs">
       <DependentUpon>DetailVacationView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ImageLoadingView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">

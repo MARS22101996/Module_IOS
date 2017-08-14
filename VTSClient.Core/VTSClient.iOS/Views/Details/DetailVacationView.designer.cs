@@ -13,8 +13,6 @@ namespace VTSClient.iOS.Views.Details
     [Register ("DetailVacationView")]
     partial class DetailVacationView
     {
-        [Outlet]
-        UIKit.UIToolbar DatePickerToolBar { get; set; }
 
         [Outlet]
         UIKit.UIDatePicker DatePickerVacation { get; set; }
@@ -52,8 +50,77 @@ namespace VTSClient.iOS.Views.Details
         [Outlet]
         UIKit.UILabel TypeText { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIToolbar DatePickerToolbar { get; set; }
+
+
         void ReleaseDesignerOutlets ()
         {
+            if (DatePickerToolbar != null) {
+                DatePickerToolbar.Dispose ();
+                DatePickerToolbar = null;
+            }
+
+            if (DatePickerVacation != null) {
+                DatePickerVacation.Dispose ();
+                DatePickerVacation = null;
+            }
+
+            if (EndDay != null) {
+                EndDay.Dispose ();
+                EndDay = null;
+            }
+
+            if (EndMonth != null) {
+                EndMonth.Dispose ();
+                EndMonth = null;
+            }
+
+            if (EndYear != null) {
+                EndYear.Dispose ();
+                EndYear = null;
+            }
+
+            if (Page != null) {
+                Page.Dispose ();
+                Page = null;
+            }
+
+            if (PageImage != null) {
+                PageImage.Dispose ();
+                PageImage = null;
+            }
+
+            if (StartDay != null) {
+                StartDay.Dispose ();
+                StartDay = null;
+            }
+
+            if (StartMonth != null) {
+                StartMonth.Dispose ();
+                StartMonth = null;
+            }
+
+            if (StartYear != null) {
+                StartYear.Dispose ();
+                StartYear = null;
+            }
+
+            if (StatusButton != null) {
+                StatusButton.Dispose ();
+                StatusButton = null;
+            }
+
+            if (TypeImageView != null) {
+                TypeImageView.Dispose ();
+                TypeImageView = null;
+            }
+
+            if (TypeText != null) {
+                TypeText.Dispose ();
+                TypeText = null;
+            }
         }
     }
 }
