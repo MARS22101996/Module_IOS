@@ -27,7 +27,7 @@ namespace VTSClient.iOS.Views.VacationTable
 			{   
                 var set = this.CreateBindingSet<VacationTableViewCell, VacationDto>();
 
-				VacationPicture.Image = VacationTypeSetting.GetPicture(VacationType.LeaveWithoutPay);
+				//VacationPicture.Image = VacationTypeSetting.GetPicture(VacationType.LeaveWithoutPay);
                
 				set.Bind(Date).To(m => m.Period);
 
