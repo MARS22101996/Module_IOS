@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+﻿﻿using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
 using VTSClient.Bll.Services;
 using VTSClient.BLL.Dto;
@@ -17,9 +17,7 @@ namespace VTSClient.Core.ViewModels
         public string LoginTextValue { get; set; }
 
 		public string PasswordTextValue { get; set; }
-
-		///public string ErrorBackgroundColor { get;  set; }
-
+       		
 		private string _errorTextValue = string.Empty;
 
 		public string ErrorTextValue
@@ -70,7 +68,7 @@ namespace VTSClient.Core.ViewModels
 		{
 			if (string.IsNullOrEmpty(LoginTextValue) || string.IsNullOrEmpty(PasswordTextValue))
 			{
-				ErrorTextValue = "The login or password is empty!";
+				ErrorTextValue = "Please, retry your login and password pair. Check current Caps Lock and input language settings.";
 
 				IsHidden = false;
 
@@ -90,7 +88,7 @@ namespace VTSClient.Core.ViewModels
 
 			if (string.IsNullOrEmpty(token))
 			{
-				ErrorTextValue = "The login or password isn't correct!";
+				ErrorTextValue = "Please, retry your login and password pair. Check current Caps Lock and input language settings.";
 
 				IsHidden = false;
 

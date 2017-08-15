@@ -20,6 +20,8 @@ namespace VTSClient.iOS.Views.Login
 
 	        NavigationController.NavigationBar.TintColor = UIColor.White;
 
+
+
 	        ApplyBindings();
         }
 
@@ -40,14 +42,10 @@ namespace VTSClient.iOS.Views.Login
 			  .For("Text")
 			  .To(vm => vm.ErrorTextValue);
 
-			//bindingSet.Bind(ErrorText)
-			//	.For("Hidden")
-			//	.To(vm => vm.IsHidden);
-
-			//bindingSet.Bind(ErrorText)
-			//  .For("BackgroundColor")
-			//  .To(vm => vm.ErrorBackgroundColor);
-
+			bindingSet.Bind(ErrorText)
+				.For("Hidden")
+				.To(vm => vm.IsHidden);
+                      			
 			bindingSet.Bind(SigninButton)
 			  .To(vm => vm.SignInCommand);
 
