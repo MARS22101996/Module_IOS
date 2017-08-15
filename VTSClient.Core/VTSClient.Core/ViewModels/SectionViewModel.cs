@@ -6,7 +6,7 @@ namespace VTSClient.Core.ViewModels
 {
     public class SectionViewModel : MvxViewModel
     {
-	    public string Name { get; set; }
+	    public FilterEnum NameStatus { get; set; }
 
         private IMvxCommand _goToVacationsCommand;
 
@@ -16,22 +16,22 @@ namespace VTSClient.Core.ViewModels
 		                                               {
 			                                               ShowViewModel<VacationViewModel>(new VacationData()
 			                                               {
-				                                               VacationStatus = GetTypeOfVacations()
-			                                               });
+				                                               VacationStatus = NameStatus
+														   });
 		                                               }));
 
-	    private  FilterEnum GetTypeOfVacations()
-        {
-            switch (Name)
-            {
-                case "Closed":
-                    return FilterEnum.Closed;
-                case "Open":
-                    return FilterEnum.Opened;
-                default:
-                    return FilterEnum.All;
-            }
-        }
+	    //private  FilterEnum GetTypeOfVacations()
+     //   {
+     //       switch (Name)
+     //       {
+     //           case FilterEnum.Closed::
+     //               return FilterEnum.Closed;
+     //           case "Open":
+     //               return FilterEnum.Opened;
+     //           default:
+     //               return FilterEnum.All;
+     //       }
+     //   }
     }
 }
 

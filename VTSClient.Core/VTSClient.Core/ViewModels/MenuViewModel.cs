@@ -1,4 +1,5 @@
 ﻿using MvvmCross.Core.ViewModels;
+using VTSClient.DAL.Enums;
 
 namespace VTSClient.Core.ViewModels
 {
@@ -16,11 +17,11 @@ namespace VTSClient.Core.ViewModels
 
 		private void AddSections()
 		{
-			Sections.Add(new SectionViewModel { Name = "All" });
+			Sections.Add(new SectionViewModel { NameStatus = FilterEnum.All });
 
-			Sections.Add(new SectionViewModel { Name = "Open" });
+			Sections.Add(new SectionViewModel { NameStatus = FilterEnum.Opened });
 
-			Sections.Add(new SectionViewModel { Name = "Closed" });
+			Sections.Add(new SectionViewModel { NameStatus = FilterEnum.Closed });
 		}
 
 		public IMvxCommand AddCommand => _addCommand ??
@@ -29,6 +30,5 @@ namespace VTSClient.Core.ViewModels
 									   {
 										   ShowViewModel<DetailViewModel>();
 									   }));
-
 	}
 }

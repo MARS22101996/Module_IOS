@@ -32,8 +32,6 @@ namespace VTSClient.iOS.Views.Details
 			var repo = new CommonApiRepository();
 
 			_vacationService = new ApiVacationService(repo);
-
-
 		}
 
 		public override  async void ViewDidLoad()
@@ -64,7 +62,7 @@ namespace VTSClient.iOS.Views.Details
 			StatusSegment.SelectedSegment = (Vacation.VacationStatus == VacationStatus.Approved) ? 0 : 1;
 
 			Page.CurrentPage = (int)Vacation.VacationType;
-			PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType);
+			PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType.ToString());
 			TypeText.Text = Enum.GetName(typeof(VacationType), 0);
 		}
 
@@ -98,7 +96,7 @@ namespace VTSClient.iOS.Views.Details
 		{
 			var page = (int)Page.CurrentPage;
 			Vacation.VacationType = (VacationType)page;
-			PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType);
+			PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType.ToString());
 			TypeText.Text = Enum.GetName(typeof(VacationType), page);
 		}
 
@@ -176,7 +174,7 @@ namespace VTSClient.iOS.Views.Details
 		{
 			var page = (int)Page.CurrentPage;
 			Vacation.VacationType = (VacationType)page;
-			PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType);
+			PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType.ToString());
 			TypeText.Text = Enum.GetName(typeof(VacationType), page);
 		}
 

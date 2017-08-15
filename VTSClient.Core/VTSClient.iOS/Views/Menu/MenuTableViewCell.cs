@@ -28,7 +28,7 @@ namespace VTSClient.iOS.Views.Menu
 
 				set.Bind(GoToVacations)
                    .For("Title")
-			       .To(vm => vm.Name);
+			       .To(vm => vm.NameStatus);
 
 				set.Bind(GoToVacations)
                    .To(vm => vm.GoToVacationsCommand);

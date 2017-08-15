@@ -19,35 +19,21 @@ namespace VTSClient.Core.Models
 
 		public VacationStatus VacationStatus { get; set; }
 
-		public VacationType VacationType { get; set; }
+		private VacationType _vacationType = DAL.Enums.VacationType.Regular;
+
+		public VacationType VacationType
+		{
+			get { return _vacationType; }
+			set
+			{
+				_vacationType = value;
+				RaisePropertyChanged(() => VacationType);
+			}
+		}
 
 		public virtual string Period => $"{Start.Date:d} - {End.Date:d}";
 
-
 		private IMvxCommand _detailCommand;
-
-		public virtual string ImageUrl => GetBoundle(VacationType);
-
-		private string GetBoundle(VacationType type)
-		{
-			switch (type)
-			{
-				case VacationType.Regular:
-					return "Icon_Request_Green";
-
-				case VacationType.Exceptional:
-					return "Icon_Request_Gray";
-
-				case VacationType.Sick:
-					return "Icon_Request_Plum";
-
-				case VacationType.Overtime:
-					return "Icon_Request_Blue";
-
-				default:
-					return "Icon_Request_Dark";
-			}
-		}
 
 		public IMvxCommand DetailCommand => _detailCommand ??
 		                                    (_detailCommand = new MvxCommand(

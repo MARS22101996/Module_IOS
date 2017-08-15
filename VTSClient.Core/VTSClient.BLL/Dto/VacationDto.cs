@@ -22,7 +22,5 @@ namespace VTSClient.BLL.Dto
 		public VacationType VacationType { get; set; }
 
 		public virtual string Period => $"{Start.Date:d} - {End.Date:d}";
-		
-		
 	}
 }
