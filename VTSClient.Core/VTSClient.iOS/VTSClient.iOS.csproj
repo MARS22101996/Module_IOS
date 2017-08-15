@@ -164,6 +164,8 @@
     <Compile Include="Views\Details\DetailVacationView.designer.cs">
       <DependentUpon>DetailVacationView.cs</DependentUpon>
     </Compile>
+    <ImageAsset Include="Resources\Images.xcassets\Icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Icon.imageset\Icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -326,5 +328,8 @@
   <ItemGroup />
   <ItemGroup />
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\Images.xcassets\Icon.imageset\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

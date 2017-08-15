@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="327" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
-                <rect key="frame" x="0.0" y="0.0" width="327" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="327" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bxg-z0-v0h">
@@ -26,8 +26,8 @@
                             <constraint firstAttribute="height" constant="44" id="zn3-94-m7R"/>
                         </constraints>
                     </imageView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="status" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zw-tV-Zeb">
-                        <rect key="frame" x="262" y="11" width="80" height="33"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="status" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zw-tV-Zeb">
+                        <rect key="frame" x="211" y="8" width="80" height="33"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="TextStatus"/>
                         <constraints>
@@ -53,17 +53,13 @@
                         <color key="textColor" red="0.23137254900000001" green="0.76862745099999996" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                        <rect key="frame" x="274" y="-4" width="46" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                        <rect key="frame" x="299" y="11" width="16" height="15"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2">
+                        <rect key="frame" x="287" y="12" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="6gg-ni-P8t"/>
+                            <constraint firstAttribute="width" constant="20" id="Hmy-Fv-sR4"/>
+                        </constraints>
+                        <state key="normal" image="Icon">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
@@ -73,34 +69,27 @@
                     <constraint firstItem="mDc-sR-U5t" firstAttribute="top" secondItem="Q3b-TX-tLT" secondAttribute="bottom" id="77J-z0-RQ9"/>
                     <constraint firstItem="mDc-sR-U5t" firstAttribute="trailing" secondItem="Q3b-TX-tLT" secondAttribute="trailing" id="AfQ-Z2-1ZU"/>
                     <constraint firstItem="bxg-z0-v0h" firstAttribute="top" secondItem="Q3b-TX-tLT" secondAttribute="top" id="Otd-fO-p49"/>
+                    <constraint firstAttribute="trailing" secondItem="2" secondAttribute="trailing" constant="20" id="XfV-wI-9Cd"/>
                     <constraint firstItem="9Zw-tV-Zeb" firstAttribute="leading" secondItem="mDc-sR-U5t" secondAttribute="trailing" id="ZjF-uH-4tW"/>
                     <constraint firstItem="Q3b-TX-tLT" firstAttribute="leading" secondItem="bxg-z0-v0h" secondAttribute="trailing" id="lig-5g-z6O"/>
                     <constraint firstItem="bxg-z0-v0h" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="nZ5-2l-5cG"/>
                     <constraint firstItem="bxg-z0-v0h" firstAttribute="bottom" secondItem="9Zw-tV-Zeb" secondAttribute="bottom" id="ofM-9N-mEg"/>
                     <constraint firstItem="mDc-sR-U5t" firstAttribute="leading" secondItem="Q3b-TX-tLT" secondAttribute="leading" id="ulL-va-qOc"/>
+                    <constraint firstItem="2" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY" id="vEo-44-GF9"/>
                     <constraint firstItem="bxg-z0-v0h" firstAttribute="bottom" secondItem="mDc-sR-U5t" secondAttribute="bottom" id="zfC-VM-Hq6"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="Date" destination="Q3b-TX-tLT" id="8ox-Lt-jZz"/>
+                <outlet property="DetailButton" destination="2" id="name-outlet-2"/>
                 <outlet property="Status" destination="9Zw-tV-Zeb" id="5Sb-s5-lrr"/>
                 <outlet property="Type" destination="mDc-sR-U5t" id="Glh-90-662"/>
                 <outlet property="VacationPicture" destination="bxg-z0-v0h" id="8Ur-p6-uWc"/>
-                <outlet property="DetailButton" destination="2" id="name-outlet-2"/>
             </connections>
             <point key="canvasLocation" x="28.5" y="52"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ITunesArtwork" width="512" height="512"/>
-        <image name="ITunesArtwork@2x" width="512" height="512"/>
-        <image name="Splash_bg" width="1080" height="1920"/>
-        <image name="Login_bg" width="1080" height="1920"/>
-        <image name="Icon_Request_Plum" width="90" height="90"/>
-        <image name="Icon_Request_Green" width="90" height="90"/>
-        <image name="Icon_Request_Gray" width="90" height="90"/>
-        <image name="Icon_Request_Dark" width="90" height="90"/>
-        <image name="Icon_Request_Blue" width="90" height="90"/>
-        <image name="Avatar_Ark" width="384" height="348"/>
+        <image name="Icon" width="64" height="64"/>
     </resources>
 </document>

@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Threading.Tasks;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
@@ -159,7 +159,7 @@ namespace VTSClient.iOS.Views.Details
 				_vacationService.UpdateVacationAsync(Vacation);
 			}
 
-			TransportData.SetId(Guid.NewGuid());
+			TransportData.SetId(Guid.NewGuid());			
 		}
 
 		private void DatePickerStartButtonEvent()
