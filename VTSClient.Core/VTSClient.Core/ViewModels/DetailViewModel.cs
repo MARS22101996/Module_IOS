@@ -63,9 +63,6 @@ namespace VTSClient.Core.ViewModels
 
 			_vacationService = new ApiVacationService(repo);
 
-			 SetVacation();
-
-			 SetData();
 		}
 
 		public IMvxCommand ChangeStatusCommand => _changeStatusCommand ??
@@ -103,15 +100,22 @@ namespace VTSClient.Core.ViewModels
 			DatePickerVacationDate = date;
 		}
 
-		private void SetVacation()
+		private async  Task SetVacation()
 		{
-			Vacation = _vacationService.GetExampleVacation();
+			var id = TransportData.GetId();
+
+			if (id == default(Guid))
+			{
+				Vacation = _vacationService.GetExampleVacation();
+			}
+			else
+			{
+				Vacation =await  _vacationService.GetVacationByIdAsync(id);
+			}
 		}
 
 		private void SetData()
-		{
-			TransportData.SetId(Vacation.Id);
-			
+		{			
 			StartDay = Vacation.Start.Day.ToString();
 
 			StartMonth = Vacation.Start.ToShortMonth();
@@ -141,9 +145,13 @@ namespace VTSClient.Core.ViewModels
 			TypeText = Enum.GetName(typeof(VacationType), page);
 		}
 
-		public void Init(VacationData parameter)
+		public async Task Init(VacationData parameter)
 		{
 			TransportData.SetId(parameter.Id);
+
+			//await SetVacation();
+
+			//SetData();
 		}
 	}
 }

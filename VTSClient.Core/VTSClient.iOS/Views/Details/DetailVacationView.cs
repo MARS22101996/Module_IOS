@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
@@ -39,7 +40,7 @@ namespace VTSClient.iOS.Views.Details
 
 		}
 
-		public override void ViewDidLoad()
+		public override  async void ViewDidLoad()
 		{
 			base.ViewDidLoad();
 
@@ -53,36 +54,36 @@ namespace VTSClient.iOS.Views.Details
 
 			//SetNavigationBar();
 
-			var id = TransportData.GetId();
-			ApplyBindings();
+			//var id = TransportData.GetId();
+			//ApplyBindings();
 
-			SetVacation();
+			await SetVacationDetail();
 
 			SetNavigationBar();
 
-			//SetData();
+			SetData();
 
             HideDatePicker();
 
 			BindEvents();
 		}
 
-		//private void SetData()
-		//{
-		//	StartDay.SetTitle(Vacation.Start.Day.ToString(), UIControlState.Normal);
-		//	StartMonth.SetTitle(Vacation.Start.ToShortMonth(), UIControlState.Normal);
-		//	StartYear.SetTitle(Vacation.Start.Year.ToString(), UIControlState.Normal);
+		private void SetData()
+		{
+			StartDay.SetTitle(Vacation.Start.Day.ToString(), UIControlState.Normal);
+			StartMonth.SetTitle(Vacation.Start.ToShortMonth(), UIControlState.Normal);
+			StartYear.SetTitle(Vacation.Start.Year.ToString(), UIControlState.Normal);
 
-		//	EndDay.SetTitle(Vacation.End.Day.ToString(), UIControlState.Normal);
-		//	EndMonth.SetTitle(Vacation.End.ToShortMonth(), UIControlState.Normal);
-		//	EndYear.SetTitle(Vacation.End.Year.ToString(), UIControlState.Normal);
+			EndDay.SetTitle(Vacation.End.Day.ToString(), UIControlState.Normal);
+			EndMonth.SetTitle(Vacation.End.ToShortMonth(), UIControlState.Normal);
+			EndYear.SetTitle(Vacation.End.Year.ToString(), UIControlState.Normal);
 
-		//	StatusSegment.SelectedSegment = (Vacation.VacationStatus == VacationStatus.Approved) ? 0 : 1;
+			StatusSegment.SelectedSegment = (Vacation.VacationStatus == VacationStatus.Approved) ? 0 : 1;
 
-		//	Page.CurrentPage = (int)Vacation.VacationType;
-		//	PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType);
-		//	TypeText.Text = Enum.GetName(typeof(VacationType), 0);
-		//}
+			Page.CurrentPage = (int)Vacation.VacationType;
+			PageImage.Image = VacationTypeSetting.GetPicture(Vacation.VacationType);
+			TypeText.Text = Enum.GetName(typeof(VacationType), 0);
+		}
 
 		private void SetNavigationBar()
 		{
@@ -147,7 +148,18 @@ namespace VTSClient.iOS.Views.Details
 
 		private void SaveButtonEvent(object sender, EventArgs e)
 		{
-			_vacationService.CreateVacationAsync(Vacation);
+			var id = TransportData.GetId();
+
+			if (id == default(Guid))
+			{
+				_vacationService.CreateVacationAsync(Vacation);
+			}
+			else
+			{
+				_vacationService.UpdateVacationAsync(Vacation);
+			}
+
+			TransportData.SetId(Guid.NewGuid());
 		}
 
 		private void DatePickerStartButtonEvent()
@@ -280,8 +292,17 @@ namespace VTSClient.iOS.Views.Details
 
 			bindingSet.Apply();
 		}
+		public async Task Init()
+		{
 
-		private async void SetVacation()
+
+			await SetVacationDetail();
+			//await SetVacation();
+
+			SetData();
+		}
+
+		private async Task SetVacationDetail()
 		{
 			var id = TransportData.GetId();
 
@@ -291,7 +312,7 @@ namespace VTSClient.iOS.Views.Details
 			}
 			else
 			{
-				Vacation = await _vacationService.GetVacationByIdAsync(id);
+				Vacation =await _vacationService.GetVacationByIdAsync(id);
 			}
 		}
 	}
