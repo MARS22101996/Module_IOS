@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
 using VTSClient.BLL.Dto;
@@ -10,7 +8,6 @@ using VTSClient.Core.Infrastructure.Automapper;
 using VTSClient.Core.Infrastructure.Extentions;
 using VTSClient.Core.Infrastructure.TransportData;
 using VTSClient.Core.Models;
-using VTSClient.DAL.Entities;
 using VTSClient.DAL.Enums;
 using VTSClient.DAL.Repositories;
 
@@ -27,7 +24,7 @@ namespace VTSClient.Core.ViewModels
 
 		private IMvxCommand _startDayCommand;
 
-		private bool IsStartDate;
+		private bool _isStartDate;
 
 		public bool IsDatePickerVacation { get; set; }
 
@@ -90,7 +87,7 @@ namespace VTSClient.Core.ViewModels
 		{
 			var date = Vacation.Start;
 			ShowDatePicker(date);
-			IsStartDate = true;
+			_isStartDate = true;
 		}
 
 		private void ShowDatePicker(DateTime date)

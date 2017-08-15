@@ -4,9 +4,7 @@ using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using UIKit;
-using VTSClient.BLL.Dto;
 using VTSClient.Core.Models;
-using VTSClient.Core.ValueConverters;
 using VTSClient.DAL.Enums;
 using VTSClient.iOS.Infrastructure;
 

@@ -1,8 +1,7 @@
 ﻿﻿using System;
 using System.Threading.Tasks;
 using Foundation;
-using MvvmCross.Binding.BindingContext;
-using MvvmCross.iOS.Views;
+ using MvvmCross.iOS.Views;
 using UIKit;
 using VTSClient.BLL.Dto;
 using VTSClient.BLL.Interfaces;
@@ -15,7 +14,6 @@ using VTSClient.iOS.Infrastructure;
 using VTSClient.iOS.Infrastructure.Extensions;
 using VTSClient.Core.Infrastructure.Extentions;
 using VTSClient.Core.Infrastructure.TransportData;
-using VTSClient.Core.Models;
 
 namespace VTSClient.iOS.Views.Details
 {
@@ -25,9 +23,7 @@ namespace VTSClient.iOS.Views.Details
 
 		private readonly IApiVacationService _vacationService;
 
-		private Guid vacationId;
-
-		private bool IsStartDate;
+		private bool _isStartDate;
 
 		public DetailVacationView() : base("DetailVacationView", null)
 		{
@@ -43,19 +39,6 @@ namespace VTSClient.iOS.Views.Details
 		public override  async void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-
-			//NavigationItem.BackBarButtonItem = new UIBarButtonItem(UIBarButtonSystemItem.Action);
-
-			//NavigationItem.Title = "Request";
-
-			//NavigationItem.RightBarButtonItem = new UIBarButtonItem(UIBarButtonSystemItem.Save);
-
-			//SetData();
-
-			//SetNavigationBar();
-
-			//var id = TransportData.GetId();
-			//ApplyBindings();
 
 			await SetVacationDetail();
 
@@ -121,16 +104,16 @@ namespace VTSClient.iOS.Views.Details
 
 		private void EndDateEvent(object s, EventArgs e)
 		{
-			var date = Vacation.End.ConvertToNSDate();
+			var date = Vacation.End.ConvertToNsDate();
 			ShowDatePicker(date);
-			IsStartDate = false;
+			_isStartDate = false;
 		}
 
 		private void StartDateEvent(object s, EventArgs e)
 		{
-			var date = Vacation.Start.ConvertToNSDate();
+			var date = Vacation.Start.ConvertToNsDate();
 			ShowDatePicker(date);
-			IsStartDate = true;
+			_isStartDate = true;
 		}
 
 		private void ShowDatePicker(NSDate date)
@@ -150,7 +133,7 @@ namespace VTSClient.iOS.Views.Details
 		{
 			var id = TransportData.GetId();
 
-			if (id == default(Guid))
+			if (id == Guid.Empty)
 			{
 				_vacationService.CreateVacationAsync(Vacation);
 			}
@@ -159,7 +142,7 @@ namespace VTSClient.iOS.Views.Details
 				_vacationService.UpdateVacationAsync(Vacation);
 			}
 
-			TransportData.SetId(Guid.NewGuid());			
+			TransportData.SetId(Guid.Empty);
 		}
 
 		private void DatePickerStartButtonEvent()
@@ -211,7 +194,7 @@ namespace VTSClient.iOS.Views.Details
 
 		partial void DoneButtonChoose(Foundation.NSObject sender)
 		{
-			if (IsStartDate)
+			if (_isStartDate)
 			{
 				DatePickerStartButtonEvent();
 				return;
@@ -219,87 +202,6 @@ namespace VTSClient.iOS.Views.Details
 			DatePickerEndButtonEvent();
 
 			HideDatePicker();
-		}
-
-
-		private void ApplyBindings()
-		{
-			var bindingSet = this.CreateBindingSet<DetailVacationView, DetailViewModel>();
-
-
-			bindingSet.Bind(StartDay)
-			   .For("Title")
-			   .To(vm => vm.StartDay);
-
-			bindingSet.Bind(StartMonth)
-			   .For("Title")
-			   .To(vm => vm.StartMonth);
-
-			bindingSet.Bind(StartYear)
-			  .For("Title")
-			  .To(vm => vm.StartYear);
-
-			bindingSet.Bind(EndDay)
-			  .For("Title")
-			  .To(vm => vm.EndDay);
-
-			bindingSet.Bind(EndMonth)
-			  .For("Title")
-			  .To(vm => vm.EndMonth);
-
-			bindingSet.Bind(EndYear)
-			  .For("Title")
-			   .To(vm => vm.EndYear);
-
-			bindingSet.Bind(StatusSegment)
-			  .For("SelectedSegment")
-			   .To(vm => vm.StatusButtonSelectedSegment);
-
-			bindingSet.Bind(TypeText)
-				.For("Text")
-				.To(vm => vm.TypeText);
-
-			//bindingSet.Bind(Page)
-			//	.For("CurrentPage")
-			//	.To(vm => vm.Page);
-
-			//bindingSet.Bind(StatusSegment)
-			//   .For("ValueChanged")
-			//   .To(vm => vm.ChangeStatusCommand);
-
-			//bindingSet.Bind(DatePickerVacation)
-			//   .For("Hidden")
-			//   .To(vm => vm.IsDatePickerVacation);
-				//.WithConversion("asd");
-
-			//DatePickerVacation.SetDate(date, true);
-
-			//bindingSet.Bind(DatePickerToolbar)
-			//   .For("Hidden")
-			//   .To(vm => vm.IsDatePickerToolbar);
-
-			//bindingSet.Bind(DatePickerVacation)
-			//	.For("Date")
-			//	.To(vm => vm.DatePickerVacationDate);
-
-			//bindingSet.Bind(StartDay) 
-		 //      .To(vm => vm.StartDayCommand);
-
-
-			//bindingSet.Bind(Page)
-			//   .For("ValueChanged")
-			//   .To(vm => vm.SwipeEventCommand);
-
-			bindingSet.Apply();
-		}
-		public async Task Init()
-		{
-
-
-			await SetVacationDetail();
-			//await SetVacation();
-
-			SetData();
 		}
 
 		private async Task SetVacationDetail()

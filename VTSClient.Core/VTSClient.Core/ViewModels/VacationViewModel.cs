@@ -19,7 +19,8 @@ namespace VTSClient.Core.ViewModels
 
         private IEnumerable<VacationCoreModel> _vacations;
 
-	    public MvxObservableCollection<VacationCoreModel> Vacations { get; set; } = new MvxObservableCollection<VacationCoreModel>();
+	    public MvxObservableCollection<VacationCoreModel> Vacations { get; set; } =
+		    new MvxObservableCollection<VacationCoreModel>();
 
 		private IMvxCommand _addCommand;
 
