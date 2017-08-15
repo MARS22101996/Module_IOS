@@ -57,8 +57,8 @@
                         <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxU-YO-hmn">
-                    <rect key="frame" x="161" y="54" width="109" height="80"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxU-YO-hmn" misplaced="YES">
+                    <rect key="frame" x="106" y="53" width="185" height="92"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="34u-Dh-nfJ"/>
                         <constraint firstAttribute="width" constant="109" id="uBS-KX-8An"/>
@@ -101,5 +101,6 @@
         <image name="Icon_Request_Dark" width="90" height="90"/>
         <image name="Icon_Request_Blue" width="90" height="90"/>
         <image name="Avatar_Ark" width="384" height="348"/>
+        <image name="Icon" width="128" height="128"/>
     </resources>
 </document>

@@ -18,9 +18,31 @@ namespace VTSClient.Core.ViewModels
 
 		public string PasswordTextValue { get; set; }
 
-		public string ErrorTextValue { get;  set; }
+		///public string ErrorBackgroundColor { get;  set; }
 
-		public string ErrorBackgroundColor { get;  set; }
+		private string _errorTextValue = string.Empty;
+
+		public string ErrorTextValue
+		{
+			get { return _errorTextValue; }
+			set
+			{
+				_errorTextValue = value;
+				RaisePropertyChanged(() => ErrorTextValue);
+			}
+		}
+
+		private bool _isHidden = true;
+
+		public bool IsHidden
+		{
+			get { return _isHidden; }
+			set
+			{
+				_isHidden = value;
+				RaisePropertyChanged(() => IsHidden);
+			}
+		}
 
 		public LoginPageViewModel()
 		{
@@ -50,6 +72,8 @@ namespace VTSClient.Core.ViewModels
 			{
 				ErrorTextValue = "The login or password is empty!";
 
+				IsHidden = false;
+
 				return false;
 			}
 			return true;
@@ -67,6 +91,8 @@ namespace VTSClient.Core.ViewModels
 			if (string.IsNullOrEmpty(token))
 			{
 				ErrorTextValue = "The login or password isn't correct!";
+
+				IsHidden = false;
 
 				return false;
 			}
