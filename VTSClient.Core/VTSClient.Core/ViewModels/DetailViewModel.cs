@@ -17,17 +17,24 @@ namespace VTSClient.Core.ViewModels
 	{
 		private readonly IApiVacationService _vacationService;
 
+		private Guid _id;
 
 		private IMvxCommand _changeStatusCommand;
 
 		private IMvxCommand _swipeEventCommand;
 
-		private IMvxCommand _startDayCommand;
+		private IMvxCommand _startDateCommand;
+
+		private IMvxCommand _endDateCommand;
+
+		private IMvxCommand _saveCommand;
+
+		private IMvxCommand _doneCommand;
 
 		private bool _isStartDate;
 
 
-		private bool _isDatePickerVacation = false;
+		private bool _isDatePickerVacation = true;
 
 		public bool IsDatePickerVacation
 		{
@@ -51,7 +58,8 @@ namespace VTSClient.Core.ViewModels
 			}
 		}
 
-		private bool _isDatePickerToolbar = false;
+		private bool _isDatePickerToolbar = true;
+
 		public bool IsDatePickerToolbar
 		{
 			get { return _isDatePickerToolbar; }
@@ -137,6 +145,7 @@ namespace VTSClient.Core.ViewModels
 		}
 
 		private int _statusButtonSelectedSegment = 0;
+
 		public int StatusButtonSelectedSegment
 		{
 			get { return _statusButtonSelectedSegment; }
@@ -178,28 +187,39 @@ namespace VTSClient.Core.ViewModels
 			var repo = new CommonApiRepository();
 
 			_vacationService = new ApiVacationService(repo);
-
 		}
 
 		public IMvxCommand ChangeStatusCommand => _changeStatusCommand ??
-												 (_changeStatusCommand = new MvxCommand(
-													 () =>
-													 {
-														 Vacation.VacationStatus = (StatusButtonSelectedSegment== 1) ? VacationStatus.Closed : VacationStatus.Approved;
-													 }));
+		                                          (_changeStatusCommand = new MvxCommand(
+			                                          ChangeStatus));
 
-		public IMvxCommand SwipeEventCommand => _swipeEventCommand ??
-										 (_swipeEventCommand = new MvxCommand(
-											 SwipeEvent));
+		public IMvxCommand DoneCommand => _doneCommand ??
+		                                  (_doneCommand = new MvxCommand(
+			                                  DoneButtonChoose));
+
+		public IMvxCommand SaveCommand => _saveCommand ??
+		                                  (_saveCommand = new MvxCommand(() =>
+			                                  {
+				                                  Save();
+				                                  ShowViewModel<MenuViewModel>();
+			                                  }
+		                                  ));
+
+	   public IMvxCommand SwipeEventCommand => _swipeEventCommand ??
+		                                        (_swipeEventCommand = new MvxCommand(
+			                                        SwipeEvent));
 
 
-		public IMvxCommand StartDayCommand => _startDayCommand ??
-										 (_startDayCommand = new MvxCommand(
-											 StartDateEvent));
+		public IMvxCommand StartDateCommand => _startDateCommand ??
+		                                      (_startDateCommand = new MvxCommand(
+			                                      StartDateEvent));
+
+		public IMvxCommand EndDateCommand => _endDateCommand ??
+									  (_endDateCommand = new MvxCommand(
+										  EndDateEvent));
 
 		public override async Task Initialize(VacationData parameter)
 		{
-
 		}
 
 		private void StartDateEvent()
@@ -209,6 +229,12 @@ namespace VTSClient.Core.ViewModels
 			_isStartDate = true;
 		}
 
+		private void EndDateEvent()
+		{
+			var date = Vacation.End;
+			ShowDatePicker(date);
+			_isStartDate = false;
+		}
 		private void ShowDatePicker(DateTime date)
 		{
 			IsDatePickerVacation = false;
@@ -216,22 +242,20 @@ namespace VTSClient.Core.ViewModels
 			DatePickerVacationDate = date;
 		}
 
-		private async  Task SetVacation()
+		private async Task SetVacation(Guid id)
 		{
-			var id = TransportData.GetId();
-
 			if (id == default(Guid))
 			{
 				Vacation = _vacationService.GetExampleVacation();
 			}
 			else
 			{
-				Vacation =await  _vacationService.GetVacationByIdAsync(id);
+				Vacation = await _vacationService.GetVacationByIdAsync(id);
 			}
 		}
 
 		private void SetData()
-		{			
+		{
 			StartDay = Vacation.Start.Day.ToString();
 
 			StartMonth = Vacation.Start.ToShortMonth();
@@ -251,13 +275,12 @@ namespace VTSClient.Core.ViewModels
 			TypeText = Enum.GetName(typeof(VacationType), 0);
 
 			DatePickerVacationDate = Vacation.Start;
-
 		}
 
 		private void SwipeEvent()
 		{
 			var page = Page;
-			Vacation.VacationType = (VacationType)page;
+			Vacation.VacationType = (VacationType) page;
 			TypeText = Enum.GetName(typeof(VacationType), page);
 		}
 
@@ -265,9 +288,71 @@ namespace VTSClient.Core.ViewModels
 		{
 			TransportData.SetId(parameter.Id);
 
-			//await SetVacation();
+			_id = parameter.Id;
 
-			//SetData();
+			await SetVacation(parameter.Id);
+
+			SetData();
 		}
+
+		private void Save()
+		{
+			if (_id == Guid.Empty)
+			{
+				_vacationService.CreateVacationAsync(Vacation);
+			}
+			else
+			{
+				_vacationService.UpdateVacationAsync(Vacation);
+			}			
+		}
+
+		private void ChangeStatus()
+		{
+			Vacation.VacationStatus = (StatusButtonSelectedSegment == 1)
+				? VacationStatus.Closed
+				: VacationStatus.Approved;
+		}
+
+		private void DoneButtonChoose()
+		{
+			if (_isStartDate)
+			{
+				DatePickerStartButtonEvent();
+				return;
+			}
+			DatePickerEndButtonEvent();
+
+			HideDatePicker();
+		}
+
+		private void HideDatePicker()
+		{
+			IsDatePickerToolbar= true;
+			IsDatePickerVacation = true;
+		}
+
+		private void DatePickerEndButtonEvent()
+		{
+			var date = DatePickerVacationDate;
+			EndDay= date.Day.ToString();
+			EndMonth=date.ToShortMonth();
+			EndYear=date.Year.ToString();
+			Vacation.End = date;
+			IsDatePickerVacation= false;
+			IsDatePickerToolbar = true;
+		}
+
+		private void DatePickerStartButtonEvent()
+		{
+			var date = DatePickerVacationDate;
+			StartDay=date.Day.ToString();
+			StartMonth=date.ToShortMonth();
+			StartYear=date.Year.ToString();
+			Vacation.Start = date;
+			IsDatePickerVacation = true;
+			IsDatePickerToolbar = true;
+		}
+
 	}
 }
