@@ -31,6 +31,8 @@ namespace VTSClient.Core.ViewModels
 
 		private IMvxCommand _doneCommand;
 
+		private IMvxCommand _cancelCommand;
+
 		private bool _isStartDate;
 
 
@@ -197,6 +199,10 @@ namespace VTSClient.Core.ViewModels
 		                                  (_doneCommand = new MvxCommand(
 			                                  DoneButtonChoose));
 
+		public IMvxCommand CancelCommand => _cancelCommand ??
+								  (_cancelCommand = new MvxCommand(
+									  HideDatePicker));
+
 		public IMvxCommand SaveCommand => _saveCommand ??
 		                                  (_saveCommand = new MvxCommand(() =>
 			                                  {
@@ -272,7 +278,14 @@ namespace VTSClient.Core.ViewModels
 
 			Page = (int) Vacation.VacationType;
 
-			TypeText = Enum.GetName(typeof(VacationType), 0);
+            if (_id == Guid.Empty)
+            {
+				TypeText = Enum.GetName(typeof(VacationType), 0);
+            }
+            else
+            {
+				TypeText = Vacation.VacationType.ToString();
+            }
 
 			DatePickerVacationDate = Vacation.Start;
 		}

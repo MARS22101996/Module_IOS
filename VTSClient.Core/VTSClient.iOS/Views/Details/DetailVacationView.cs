@@ -115,6 +115,9 @@ namespace VTSClient.iOS.Views.Details
 			bindingSet.Bind(DoneButton)
 		       .To(vm => vm.DoneCommand);
 
+			bindingSet.Bind(DateToolBar)
+                .To(vm => vm.CancelCommand);
+
 			bindingSet.Bind(DatePickerVacation)
 			   .For("Hidden")
 			   .To(vm => vm.IsDatePickerVacation);
@@ -148,7 +151,7 @@ namespace VTSClient.iOS.Views.Details
 			bindingSet.Bind(Page)
 			   .For("ValueChanged")
 			   .To(vm => vm.SwipeEventCommand);
-
+            
 			bindingSet.Apply();
 
 			var numPage = (int) Page.CurrentPage;

@@ -152,7 +152,7 @@
                     <items>
                         <barButtonItem title="Cancel" id="ecn-c1-b7b">
                             <connections>
-                                <action selector="CancelButtonChoose:" destination="-1" id="Dl4-R4-1eN"/>
+                                <action selector="CancelButton:" destination="-1" id="Fwc-ym-l2g"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="8W7-HO-9Au"/>
