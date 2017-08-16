@@ -26,31 +26,150 @@ namespace VTSClient.Core.ViewModels
 
 		private bool _isStartDate;
 
-		public bool IsDatePickerVacation { get; set; }
 
-		public DateTime DatePickerVacationDate { get; set; }
+		private bool _isDatePickerVacation = false;
 
-		public bool IsDatePickerToolbar { get; set; }
+		public bool IsDatePickerVacation
+		{
+			get { return _isDatePickerVacation; }
+			set
+			{
+				_isDatePickerVacation = value;
+				RaisePropertyChanged(() => IsDatePickerVacation);
+			}
+		}
+
+		private DateTime _datePickerVacationDate = DateTime.UtcNow;
+
+		public DateTime DatePickerVacationDate
+		{
+			get { return _datePickerVacationDate; }
+			set
+			{
+				_datePickerVacationDate = value;
+				RaisePropertyChanged(() => DatePickerVacationDate);
+			}
+		}
+
+		private bool _isDatePickerToolbar = false;
+		public bool IsDatePickerToolbar
+		{
+			get { return _isDatePickerToolbar; }
+			set
+			{
+				_isDatePickerToolbar = value;
+				RaisePropertyChanged(() => IsDatePickerToolbar);
+			}
+		}
 
 		private VacationDto Vacation { get; set; }
 
-		public string StartDay { get; set; }
+		private string _startDay = string.Empty;
 
-		public string StartMonth { get; set; }
+		public string StartDay
+		{
+			get { return _startDay; }
+			set
+			{
+				_startDay = value;
+				RaisePropertyChanged(() => StartDay);
+			}
+		}
 
-		public string StartYear { get; set; }
+		private string _startMonth = string.Empty;
 
-		public string EndDay { get; set; }
+		public string StartMonth
+		{
+			get { return _startMonth; }
+			set
+			{
+				_startMonth = value;
+				RaisePropertyChanged(() => StartMonth);
+			}
+		}
 
-		public string EndMonth { get; set; }
+		private string _startYear = string.Empty;
 
-		public string EndYear { get; set; }
+		public string StartYear
+		{
+			get { return _startYear; }
+			set
+			{
+				_startYear = value;
+				RaisePropertyChanged(() => StartYear);
+			}
+		}
 
-		public int StatusButtonSelectedSegment { get; set; }
+		private string _endDay = string.Empty;
 
-		public string TypeText { get; set; }
+		public string EndDay
+		{
+			get { return _endDay; }
+			set
+			{
+				_endDay = value;
+				RaisePropertyChanged(() => EndDay);
+			}
+		}
 
-		public int Page { get; set; }
+		private string _endMonth = string.Empty;
+
+		public string EndMonth
+		{
+			get { return _endMonth; }
+			set
+			{
+				_endMonth = value;
+				RaisePropertyChanged(() => EndMonth);
+			}
+		}
+
+		private string _endYear = string.Empty;
+
+		public string EndYear
+		{
+			get { return _endYear; }
+			set
+			{
+				_endYear = value;
+				RaisePropertyChanged(() => EndYear);
+			}
+		}
+
+		private int _statusButtonSelectedSegment = 0;
+		public int StatusButtonSelectedSegment
+		{
+			get { return _statusButtonSelectedSegment; }
+			set
+			{
+				_statusButtonSelectedSegment = value;
+				RaisePropertyChanged(() => StatusButtonSelectedSegment);
+			}
+		}
+
+		private string _typeText = string.Empty;
+
+		public string TypeText
+		{
+			get { return _typeText; }
+			set
+			{
+				_typeText = value;
+				RaisePropertyChanged(() => TypeText);
+			}
+		}
+
+		private int _page = 0;
+
+		public int Page
+		{
+			get { return _page; }
+			set
+			{
+				_page = value;
+				RaisePropertyChanged(() => Page);
+			}
+		}
 
 		public DetailViewModel()
 		{

@@ -45,7 +45,7 @@ namespace VTSClient.iOS.Views.Login
 			bindingSet.Bind(ErrorText)
 				.For("Hidden")
 				.To(vm => vm.IsHidden);
-                      			
+
 			bindingSet.Bind(SigninButton)
 			  .To(vm => vm.SignInCommand);
 
