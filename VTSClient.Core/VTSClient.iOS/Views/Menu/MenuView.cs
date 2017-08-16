@@ -35,7 +35,6 @@ namespace VTSClient.iOS.Views.Menu
 	        SectionTable.Source = source;
 
 	        SectionTable.ReloadData();
-
 		}
     }
 }

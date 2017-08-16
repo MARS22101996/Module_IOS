@@ -1,28 +1,14 @@
-﻿﻿using System;
-using System.Threading.Tasks;
-using Foundation;
- using MvvmCross.Binding.BindingContext;
- using MvvmCross.iOS.Views;
+﻿using MvvmCross.Binding.BindingContext;
+using MvvmCross.iOS.Views;
 using UIKit;
-using VTSClient.BLL.Dto;
-using VTSClient.BLL.Interfaces;
-using VTSClient.BLL.Services;
-using VTSClient.Core.Infrastructure.Automapper;
 using VTSClient.Core.ViewModels;
 using VTSClient.DAL.Enums;
-using VTSClient.DAL.Repositories;
 using VTSClient.iOS.Infrastructure;
-using VTSClient.iOS.Infrastructure.Extensions;
-using VTSClient.Core.Infrastructure.Extentions;
-using VTSClient.Core.Infrastructure.TransportData;
 
 namespace VTSClient.iOS.Views.Details
 {
 	public partial class DetailVacationView : MvxViewController<DetailViewModel>
 	{
-		public VacationDto Vacation { get; set; }
-
-		private readonly IApiVacationService _vacationService;
 
 		public DetailVacationView() : base("DetailVacationView", null)
 		{
@@ -43,6 +29,7 @@ namespace VTSClient.iOS.Views.Details
 		{
 			NavigationItem.BackBarButtonItem = new UIBarButtonItem(UIBarButtonSystemItem.Action);
 			NavigationItem.Title = "Request";
+			NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes() { ForegroundColor = UIColor.White };
 		}
 
 		private void HideDatePicker()
@@ -53,7 +40,7 @@ namespace VTSClient.iOS.Views.Details
 		
 		partial void ActionRight(Foundation.NSObject sender)
 		{
-			Page.CurrentPage -= 1;			
+			Page.CurrentPage -= 1;
 		}
 
 		partial void ActionLeft(Foundation.NSObject sender)

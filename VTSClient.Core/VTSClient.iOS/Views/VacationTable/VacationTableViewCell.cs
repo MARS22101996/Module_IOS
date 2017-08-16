@@ -5,7 +5,6 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using UIKit;
 using VTSClient.Core.Models;
-using VTSClient.DAL.Enums;
 using VTSClient.iOS.Infrastructure;
 
 namespace VTSClient.iOS.Views.VacationTable

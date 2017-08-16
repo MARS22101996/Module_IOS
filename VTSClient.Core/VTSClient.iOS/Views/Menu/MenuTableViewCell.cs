@@ -1,10 +1,8 @@
 ﻿using System;
-
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using UIKit;
-using VTSClient.Core.Models;
 using VTSClient.Core.ViewModels;
 
 namespace VTSClient.iOS.Views.Menu

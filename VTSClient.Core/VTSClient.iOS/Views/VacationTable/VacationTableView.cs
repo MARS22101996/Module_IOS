@@ -18,6 +18,8 @@ namespace VTSClient.iOS.Views.VacationTable
 
             NavigationItem.Title = "All Requests";
 
+			NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes() { ForegroundColor = UIColor.White };
+
 			var source = new MvxSimpleTableViewSource(VacationTable, "VacationTableViewCell", VacationTableViewCell.Key);
 
 			VacationTable.RowHeight = 50;
@@ -40,4 +42,3 @@ namespace VTSClient.iOS.Views.VacationTable
         }
     }
 }
-

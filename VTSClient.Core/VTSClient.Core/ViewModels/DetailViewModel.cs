@@ -6,7 +6,6 @@ using VTSClient.BLL.Interfaces;
 using VTSClient.BLL.Services;
 using VTSClient.Core.Infrastructure.Automapper;
 using VTSClient.Core.Infrastructure.Extentions;
-using VTSClient.Core.Infrastructure.TransportData;
 using VTSClient.Core.Models;
 using VTSClient.DAL.Enums;
 using VTSClient.DAL.Repositories;
@@ -34,7 +33,6 @@ namespace VTSClient.Core.ViewModels
 		private IMvxCommand _cancelCommand;
 
 		private bool _isStartDate;
-
 
 		private bool _isDatePickerVacation = true;
 
@@ -231,20 +229,26 @@ namespace VTSClient.Core.ViewModels
 		private void StartDateEvent()
 		{
 			var date = Vacation.Start;
+
 			ShowDatePicker(date);
+
 			_isStartDate = true;
 		}
 
 		private void EndDateEvent()
 		{
 			var date = Vacation.End;
+
 			ShowDatePicker(date);
+
 			_isStartDate = false;
 		}
 		private void ShowDatePicker(DateTime date)
 		{
 			IsDatePickerVacation = false;
+
 			IsDatePickerToolbar = false;
+
 			DatePickerVacationDate = date;
 		}
 
@@ -299,8 +303,6 @@ namespace VTSClient.Core.ViewModels
 
 		public async Task Init(VacationData parameter)
 		{
-			TransportData.SetId(parameter.Id);
-
 			_id = parameter.Id;
 
 			await SetVacation(parameter.Id);
@@ -342,28 +344,41 @@ namespace VTSClient.Core.ViewModels
 		private void HideDatePicker()
 		{
 			IsDatePickerToolbar= true;
+
 			IsDatePickerVacation = true;
 		}
 
 		private void DatePickerEndButtonEvent()
 		{
 			var date = DatePickerVacationDate;
+
 			EndDay= date.Day.ToString();
+
 			EndMonth=date.ToShortMonth();
+
 			EndYear=date.Year.ToString();
+
 			Vacation.End = date;
+
 			IsDatePickerVacation= false;
+
 			IsDatePickerToolbar = true;
 		}
 
 		private void DatePickerStartButtonEvent()
 		{
 			var date = DatePickerVacationDate;
+
 			StartDay=date.Day.ToString();
+
 			StartMonth=date.ToShortMonth();
+
 			StartYear=date.Year.ToString();
+
 			Vacation.Start = date;
+
 			IsDatePickerVacation = true;
+
 			IsDatePickerToolbar = true;
 		}
 

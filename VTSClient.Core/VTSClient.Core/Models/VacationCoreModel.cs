@@ -44,6 +44,5 @@ namespace VTSClient.Core.Models
 					                                    Id = Id
 				                                    });
 			                                    }));
-
 	}
 }

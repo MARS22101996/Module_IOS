@@ -14,7 +14,10 @@ namespace VTSClient.Core.ViewModels
 
 		private IMvxCommand _signInCommand;
 
-        public string LoginTextValue { get; set; }
+		private const string ErrorMessage =
+			"Please, retry your login and password pair. Check current Caps Lock and input language settings.";
+
+		public string LoginTextValue { get; set; }
 
 		public string PasswordTextValue { get; set; }
        		
@@ -68,7 +71,7 @@ namespace VTSClient.Core.ViewModels
 		{
 			if (string.IsNullOrEmpty(LoginTextValue) || string.IsNullOrEmpty(PasswordTextValue))
 			{
-				ErrorTextValue = "Please, retry your login and password pair. Check current Caps Lock and input language settings.";
+				ErrorTextValue = ErrorMessage;
 
 				IsHidden = false;
 
@@ -88,7 +91,7 @@ namespace VTSClient.Core.ViewModels
 
 			if (string.IsNullOrEmpty(token))
 			{
-				ErrorTextValue = "Please, retry your login and password pair. Check current Caps Lock and input language settings.";
+				ErrorTextValue = ErrorMessage;
 
 				IsHidden = false;
 

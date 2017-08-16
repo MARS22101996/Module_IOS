@@ -38,7 +38,6 @@
     <Compile Include="Infrastructure\Automapper\Profiles\DtoToEntityProfile.cs" />
     <Compile Include="Infrastructure\Automapper\Profiles\EntityToDtoProfile.cs" />
     <Compile Include="Infrastructure\DI\CoreSetup.cs" />
-    <Compile Include="Infrastructure\TransportData\TransportData.cs" />
     <Compile Include="Models\VacationCoreModel.cs" />
     <Compile Include="Models\VacationData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
