@@ -133,6 +133,7 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <Compile Include="Setup.cs" />
     <InterfaceDefinition Include="Views\Login\LoginView.xib" />
+    <Compile Include="ValueConverters\StatusToNumberValueConverter.cs" />
     <Compile Include="Views\Login\LoginView.cs" />
     <Compile Include="Views\Login\LoginView.designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>

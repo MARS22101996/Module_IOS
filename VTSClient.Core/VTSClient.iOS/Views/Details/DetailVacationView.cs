@@ -85,7 +85,8 @@ namespace VTSClient.iOS.Views.Details
 
 			bindingSet.Bind(StatusSegment)
 			  .For("SelectedSegment")
-			   .To(vm => vm.StatusButtonSelectedSegment);
+			   .To(vm => vm.StatusButtonSelectedSegment)
+			   .WithConversion("StatusToNumber");
 
 			bindingSet.Bind(TypeText)
 				.For("Text")
@@ -145,7 +146,7 @@ namespace VTSClient.iOS.Views.Details
 
 			var vacationType = (VacationType) numPage;
 
-			PageImage.Image = VacationTypeSetting.GetPictureFromPage(vacationType);
+			PageImage.Image = VacationTypeSetting.GetPicture(vacationType.ToString());
 		}
 	}
 }

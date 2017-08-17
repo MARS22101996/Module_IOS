@@ -26,26 +26,5 @@ namespace VTSClient.iOS.Infrastructure
 					return UIImage.FromBundle("Icon_Request_Dark");
 			}
 		}
-
-		public static UIImage GetPictureFromPage(VacationType type)
-		{
-			switch (type)
-			{
-				case VacationType.Regular:
-					return UIImage.FromBundle("Icon_Request_Green");
-
-				case VacationType.Exceptional:
-					return UIImage.FromBundle("Icon_Request_Gray");
-
-				case VacationType.Sick:
-					return UIImage.FromBundle("Icon_Request_Plum");
-
-				case VacationType.Overtime:
-					return UIImage.FromBundle("Icon_Request_Blue");
-
-				default:
-					return UIImage.FromBundle("Icon_Request_Dark");
-			}
-		}
 	}
 }

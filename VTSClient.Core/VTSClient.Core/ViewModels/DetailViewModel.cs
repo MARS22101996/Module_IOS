@@ -144,9 +144,9 @@ namespace VTSClient.Core.ViewModels
 			}
 		}
 
-		private int _statusButtonSelectedSegment = 0;
+		private VacationStatus _statusButtonSelectedSegment = 0;
 
-		public int StatusButtonSelectedSegment
+		public VacationStatus StatusButtonSelectedSegment
 		{
 			get { return _statusButtonSelectedSegment; }
 			set
@@ -274,7 +274,7 @@ namespace VTSClient.Core.ViewModels
 
 			EndYear = Vacation.End.Year.ToString();
 
-			StatusButtonSelectedSegment = Vacation.VacationStatus == VacationStatus.Approved ? 0 : 1;
+			StatusButtonSelectedSegment = Vacation.VacationStatus;
 
 			Page = (int) Vacation.VacationType;
 
@@ -320,9 +320,7 @@ namespace VTSClient.Core.ViewModels
 
 		private void ChangeStatus()
 		{
-			Vacation.VacationStatus = (StatusButtonSelectedSegment == 1)
-				? VacationStatus.Closed
-				: VacationStatus.Approved;
+			Vacation.VacationStatus = StatusButtonSelectedSegment;
 		}
 
 		private void DoneButtonChoose()

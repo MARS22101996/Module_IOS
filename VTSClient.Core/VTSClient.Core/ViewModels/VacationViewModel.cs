@@ -61,16 +61,16 @@ namespace VTSClient.Core.ViewModels
 	        }
         }
 
-	    private async Task<IEnumerable<VacationDto>> GetFilteredVacations(VacationData parameter)
+	    private Task<IEnumerable<VacationDto>> GetFilteredVacations(VacationData parameter)
         {
-			var vacations = await _vacationService.FilterVacations(parameter.VacationStatus);
+			var vacations =  _vacationService.FilterVacations(parameter.VacationStatus);
 
             return vacations;
         }
 
-		private async Task<IEnumerable<VacationDto>> GetAllVacations()
+		private Task<IEnumerable<VacationDto>> GetAllVacations()
 		{
-			var vacations = await _vacationService.GetVacationAsync();
+			var vacations =  _vacationService.GetVacationAsync();
 
 			return vacations;
 		}
