@@ -1,6 +1,8 @@
 ﻿using System;
+using AutoMapper;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
+using VTSClient.Bll.Services;
 using VTSClient.BLL.Interfaces;
 using VTSClient.BLL.Services;
 using VTSClient.Core.Infrastructure.Automapper;
@@ -15,15 +17,19 @@ namespace VTSClient.Core
         {
             base.Initialize();
 
-            AutoMapperCoreConfiguration.Configure();
+			AutoMapperCoreConfiguration.Configure();
 
             Mvx.RegisterSingleton<IMvxAppStart>(new CustomAppStart());
             			
-			Mvx.LazyConstructAndRegisterSingleton<ISqlVacationService,SqlVacationService>();
+			Mvx.RegisterType<ISqlVacationService,SqlVacationService>();
 
-            Mvx.LazyConstructAndRegisterSingleton<IApiVacationService, ApiVacationService>();
+			Mvx.RegisterType<IApiVacationService, ApiVacationService>();
 
-			Mvx.LazyConstructAndRegisterSingleton<IApiRepository, CommonApiRepository>();
+			Mvx.RegisterType<IApiRepository, CommonApiRepository>();
+
+			Mvx.RegisterType<IUserRepository, UserRepository>();
+
+			Mvx.RegisterType<IAccountService, AccountService>();
 		}
     }
 }

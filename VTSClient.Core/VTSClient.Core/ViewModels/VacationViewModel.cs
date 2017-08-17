@@ -24,13 +24,9 @@ namespace VTSClient.Core.ViewModels
 
 		private IMvxCommand _addCommand;
 
-		public VacationViewModel()
+		public VacationViewModel(IApiVacationService vacationService)
         {
-            AutoMapperCoreConfiguration.Configure();
-
-            var repo = new CommonApiRepository();
-
-            _vacationService = new ApiVacationService(repo);
+	        _vacationService = vacationService;
         }
 
 		public IMvxCommand AddCommand => _addCommand ??

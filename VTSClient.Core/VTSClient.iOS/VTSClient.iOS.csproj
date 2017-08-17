@@ -84,7 +84,6 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure\IOSSetup.cs" />
     <Compile Include="Infrastructure\VacationTypeSetting.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />

@@ -45,13 +45,9 @@ namespace VTSClient.Core.ViewModels
 			}
 		}
 
-		public LoginPageViewModel()
+		public LoginPageViewModel(IAccountService service)
 		{
-            AutoMapperCoreConfiguration.Configure();
-
-            var repo = new UserRepository();
-
-			_loginService = new AccountService(repo);
+			_loginService = service;
 		}
 
 		public IMvxCommand SignInCommand => _signInCommand ??

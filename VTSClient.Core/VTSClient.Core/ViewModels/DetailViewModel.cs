@@ -180,13 +180,9 @@ namespace VTSClient.Core.ViewModels
 			}
 		}
 
-		public DetailViewModel()
+		public DetailViewModel(IApiVacationService vacationService)
 		{
-			AutoMapperCoreConfiguration.Configure();
-
-			var repo = new CommonApiRepository();
-
-			_vacationService = new ApiVacationService(repo);
+			_vacationService = vacationService;
 		}
 
 		public IMvxCommand ChangeStatusCommand => _changeStatusCommand ??
